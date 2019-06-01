@@ -11,6 +11,9 @@
     <div class="box box-solid box-success">
         <div class="box-header with-border">
             <h3 class="box-title">Circulares</h3>
+            <div class="box-tools pull-right">
+                <a href="{{ url('school/circulares/create') }}" type="button" class="btn btn-block btn-info">Crear Circular</a>
+            </div>
         </div>
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">

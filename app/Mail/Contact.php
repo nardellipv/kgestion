@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Mail;
+namespace kindergestion\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

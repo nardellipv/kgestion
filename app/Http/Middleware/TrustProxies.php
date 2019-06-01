@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http\Middleware;
+namespace kindergestion\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

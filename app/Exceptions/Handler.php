@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Exceptions;
+namespace kindergestion\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

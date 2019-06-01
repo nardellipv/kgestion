@@ -1,18 +1,19 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\ComunicationRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\ComunicationRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use gkinder\Comunication;
-use gkinder\Tutor;
+use kindergestion\Comunication;
+use kindergestion\Tutor;
 
 class ComunicationController extends Controller
 {
     public function index()
     {
-        $comunications = Comunication::where('school_id', '=', auth()->user()->school_id)
+        $comunications = Comunication::with(['tutor'])
+            ->where('school_id', '=', auth()->user()->school_id)
             ->orderBy('date', 'DESC')
             ->paginate(10);
 

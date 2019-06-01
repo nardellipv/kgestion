@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http\Middleware;
+namespace kindergestion\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

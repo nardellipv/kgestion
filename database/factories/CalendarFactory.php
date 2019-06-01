@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\Calendar;
+use kindergestion\Calendar;
 use Faker\Generator as Faker;
 
 $factory->define(Calendar::class, function (Faker $faker) {

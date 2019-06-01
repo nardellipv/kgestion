@@ -1,10 +1,10 @@
 <?php
 
-namespace gkinder\Policies;
+namespace kindergestion\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use gkinder\School;
-use gkinder\User;
+use kindergestion\School;
+use kindergestion\User;
 
 class SchoolPolicy
 {

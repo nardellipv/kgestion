@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Providers;
+namespace kindergestion\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -15,13 +15,13 @@ class ComposerServicePorvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['school.menu.menu'], 'gkinder\Http\CounterView\CounterMails');
+        View::composer(['school.menu.menu'], 'kindergestion\Http\CounterView\CounterMails');
 
-        View::composer(['tutor.menu.menu'], 'gkinder\Http\CounterView\CounterMailsTutor');
+        View::composer(['tutor.menu.menu'], 'kindergestion\Http\CounterView\CounterMailsTutor');
 
-        View::composer(['school.menu.menu'], 'gkinder\Http\CounterView\CounterCircular');
+        View::composer(['school.menu.menu'], 'kindergestion\Http\CounterView\CounterCircular');
 
-        View::composer(['tutor.menu.menu'], 'gkinder\Http\CounterView\CounterCircular');
+        View::composer(['tutor.menu.menu'], 'kindergestion\Http\CounterView\CounterCircular');
     }
 
     /**

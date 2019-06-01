@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'GKinder') }}</title>
+    <title>{{ config('app.name', 'KinderGestión') }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -21,15 +21,15 @@
     <link rel="stylesheet" href="{{ asset('dist/css/skins/skin-blue.min.css') }}">
 
     {{--google analytics--}}
-    @include('external.analytics')
+    {{--@include('external.analytics')--}}
     {{--google analytics--}}
 
     {{--OneSignal--}}
-    @include('external.oneSignal')
+    {{--@include('external.oneSignal')--}}
     {{--OneSignal--}}
 
     {{--drift--}}
-    @include('external.drift')
+    {{--@include('external.drift')--}}
     {{--drift--}}
 
 </head>

@@ -1,11 +1,11 @@
 <?php
 
-namespace gkinder\Http\Controllers;
+namespace kindergestion\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-use gkinder\Mail\Contact;
+use kindergestion\Mail\Contact;
 
 class ContactMailController extends Controller
 {

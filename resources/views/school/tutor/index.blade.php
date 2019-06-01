@@ -10,7 +10,10 @@
     @endif
     <div class="box box-solid box-success">
         <div class="box-header">
-            <h3 class="box-title">Listado de los tutores</h3>
+            <h3 class="box-title">Listado de los Padre/Tutor</h3>
+            <div class="box-tools pull-right">
+                <a href="{{ url('school/tutores/create') }}" type="button" class="btn btn-block btn-info">Agregar Padre/Tutor</a>
+            </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

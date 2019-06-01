@@ -151,25 +151,25 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
-        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Jenssegers\Date\DateServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
-        gkinder\Providers\ComposerServicePorvider::class,
+        kindergestion\Providers\ComposerServicePorvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
         /*
          * Application Service Providers...
          */
-        gkinder\Providers\AppServiceProvider::class,
-        gkinder\Providers\AuthServiceProvider::class,
-        // gkinder\Providers\BroadcastServiceProvider::class,
-        gkinder\Providers\EventServiceProvider::class,
-        gkinder\Providers\RouteServiceProvider::class,
+        kindergestion\Providers\AppServiceProvider::class,
+        kindergestion\Providers\AuthServiceProvider::class,
+        // kindergestion\Providers\BroadcastServiceProvider::class,
+        kindergestion\Providers\EventServiceProvider::class,
+        kindergestion\Providers\RouteServiceProvider::class,
 
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Class Aliases
+    | Class AliasesBarryvdh
     |--------------------------------------------------------------------------
     |
     | This array of class aliases will be registered when this application
@@ -218,6 +218,7 @@ return [
         'Date' => Jenssegers\Date\Date::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        'Charts' => ConsoleTVs\Charts\Charts::class,
     ],
 
 ];

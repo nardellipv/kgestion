@@ -1,9 +1,9 @@
 <?php
 
-namespace gkinder\Http\Middleware;
+namespace kindergestion\Http\Middleware;
 
 use Closure;
-use gkinder\User;
+use kindergestion\User;
 use Illuminate\Support\Facades\Auth;
 
 class UserType

@@ -1,19 +1,20 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\MessageRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\MessageRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use gkinder\Comunication;
-use gkinder\Message;
+use kindergestion\Comunication;
+use kindergestion\Message;
 
 class MessageController extends Controller
 {
     public function index()
     {
 
-        $messages = Message::where('school_id', '=', auth()->user()->school_id)
+        $messages = Message::with(['tutor'])
+            ->where('school_id', '=', auth()->user()->school_id)
             ->orderBy('date', 'desc')
             ->paginate(10);
 

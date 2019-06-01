@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder;
+namespace kindergestion;
 
 use Illuminate\Database\Eloquent\Model;
 

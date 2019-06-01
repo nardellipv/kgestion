@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use gkinder\Student;
+use kindergestion\Student;
 
 $factory->define(Student::class, function (Faker $faker) {
     return [

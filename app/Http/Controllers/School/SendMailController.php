@@ -1,13 +1,13 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-use gkinder\Mail\Contact;
+use kindergestion\Mail\Contact;
 
 class SendMailController extends Controller
 {

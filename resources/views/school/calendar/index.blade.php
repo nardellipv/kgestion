@@ -8,6 +8,9 @@
     <div class="box box-solid box-success">
         <div class="box-header with-border">
             <h3 class="box-title">Calendario</h3>
+            <div class="box-tools pull-right">
+                <a href="{{ url('school/calendario/create') }}" type="button" class="btn btn-block btn-info">Agregar Evento</a>
+            </div>
         </div>
         <div id='calendar'></div>
     </div>

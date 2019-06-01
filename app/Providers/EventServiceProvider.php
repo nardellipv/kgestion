@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Providers;
+namespace kindergestion\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'gkinder\Events\Event' => [
-            'gkinder\Listeners\EventListener',
+        'kindergestion\Events\Event' => [
+            'kindergestion\Listeners\EventListener',
         ],
     ];
 

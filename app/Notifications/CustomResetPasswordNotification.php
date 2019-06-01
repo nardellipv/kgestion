@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Notifications;
+namespace kindergestion\Notifications;
 
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;

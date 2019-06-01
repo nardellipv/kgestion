@@ -1,11 +1,11 @@
 <?php
 
-namespace gkinder\Http\CounterView;
+namespace kindergestion\Http\CounterView;
 
 use Illuminate\Support\Facades\Auth;
-use gkinder\Comunication;
+use kindergestion\Comunication;
 use Illuminate\View\View;
-use gkinder\Tutor;
+use kindergestion\Tutor;
 
 class CounterMailsTutor
 {

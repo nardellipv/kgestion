@@ -1,10 +1,10 @@
 <?php
 
-namespace gkinder\Http\Controllers\Auth;
+namespace kindergestion\Http\Controllers\Auth;
 
-use gkinder\Http\Controllers\Controller;
-use gkinder\User;
-use gkinder\School;
+use kindergestion\Http\Controllers\Controller;
+use kindergestion\User;
+use kindergestion\School;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
 
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array $data
-     * @return \gkinder\User
+     * @return \kindergestion\User
      */
     protected function create(array $data)
     {

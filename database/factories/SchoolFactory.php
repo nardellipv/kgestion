@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\School;
+use kindergestion\School;
 use Faker\Generator as Faker;
 
 $factory->define(School::class, function (Faker $faker) {

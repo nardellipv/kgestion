@@ -9,6 +9,9 @@
     <div class="box box-solid box-success">
         <div class="box-header">
             <h3 class="box-title">Listado de alumnos</h3>
+            <div class="box-tools pull-right">
+                <a href="{{ url('school/estudiantes/create') }}" type="button" class="btn btn-block btn-info">Agregar Alumno</a>
+            </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

@@ -1,8 +1,8 @@
 <?php
 
-namespace gkinder\Http\Controllers\Auth;
+namespace kindergestion\Http\Controllers\Auth;
 
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

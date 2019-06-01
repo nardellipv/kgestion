@@ -1,15 +1,15 @@
 <?php
 
-namespace gkinder\Http\Controllers\Tutor;
+namespace kindergestion\Http\Controllers\Tutor;
 
-use gkinder\Http\Requests\Tutor\MessageRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\Tutor\MessageRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
-use gkinder\Comunication;
-use gkinder\Message;
-use gkinder\School;
-use gkinder\Tutor;
+use kindergestion\Comunication;
+use kindergestion\Message;
+use kindergestion\School;
+use kindergestion\Tutor;
 
 class MessageController extends Controller
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use gkinder\NewsLetter;
+use kindergestion\NewsLetter;
 
 $factory->define(NewsLetter::class, function (Faker $faker) {
     return [

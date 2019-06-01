@@ -1,14 +1,14 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\CalendarStoreRequest;
-use gkinder\Http\Controllers\Controller;
-use gkinder\Http\Requests\School\CalendarUpdateRequest;
+use kindergestion\Http\Requests\School\CalendarStoreRequest;
+use kindergestion\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\CalendarUpdateRequest;
 use Illuminate\Support\Facades\Session;
 use Jenssegers\Date\Date;
-use gkinder\Calendar;
-use gkinder\Room;
+use kindergestion\Calendar;
+use kindergestion\Room;
 
 class CalendarController extends Controller
 {

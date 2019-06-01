@@ -1,20 +1,21 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\TeacherStoreRequest;
-use gkinder\Http\Requests\School\TeacherUpdateRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\TeacherStoreRequest;
+use kindergestion\Http\Requests\School\TeacherUpdateRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
-use gkinder\Room;
-use gkinder\Teacher;
+use kindergestion\Room;
+use kindergestion\Teacher;
 
 class TeacherController extends Controller
 {
     public function index()
     {
-        $teachers = Teacher::where('school_id', '=', auth()->user()->school_id)
+        $teachers = Teacher::with(['room'])
+            ->where('school_id', '=', auth()->user()->school_id)
             ->get();
 
         return view('school.teacher.index', compact('teachers'));

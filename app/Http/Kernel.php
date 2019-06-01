@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http;
+namespace kindergestion\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -16,9 +16,9 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \gkinder\Http\Middleware\TrimStrings::class,
+        \kindergestion\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \gkinder\Http\Middleware\TrustProxies::class,
+        \kindergestion\Http\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,12 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \gkinder\Http\Middleware\EncryptCookies::class,
+            \kindergestion\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \gkinder\Http\Middleware\VerifyCsrfToken::class,
+            \kindergestion\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -56,10 +56,10 @@ class Kernel extends HttpKernel
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \gkinder\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \kindergestion\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'ActiveStatus' => \gkinder\Http\Middleware\ActiveStatus::class,
-        'UserType' => \gkinder\Http\Middleware\UserType::class,
-        'Account' => \gkinder\Http\Middleware\Account::class,
+        'ActiveStatus' => \kindergestion\Http\Middleware\ActiveStatus::class,
+        'UserType' => \kindergestion\Http\Middleware\UserType::class,
+        'Account' => \kindergestion\Http\Middleware\Account::class,
     ];
 }

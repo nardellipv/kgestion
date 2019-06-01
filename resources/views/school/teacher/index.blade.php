@@ -11,6 +11,9 @@
     <div class="box box-solid box-success">
         <div class="box-header">
             <h3 class="box-title">Listado de profesores</h3>
+            <div class="box-tools pull-right">
+                <a href="{{ url('school/profesores/create') }}" type="button" class="btn btn-block btn-info">Agregar Profesor</a>
+            </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

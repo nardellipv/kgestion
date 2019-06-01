@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => gkinder\User::class,
+        'model' => kindergestion\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

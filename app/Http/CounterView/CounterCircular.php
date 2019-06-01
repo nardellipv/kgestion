@@ -1,10 +1,10 @@
 <?php
 
-namespace gkinder\Http\CounterView;
+namespace kindergestion\Http\CounterView;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
-use gkinder\Circular;
+use kindergestion\Circular;
 
 class CounterCircular
 {

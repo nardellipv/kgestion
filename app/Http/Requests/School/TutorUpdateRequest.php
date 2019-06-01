@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http\Requests\School;
+namespace kindergestion\Http\Requests\School;
 
 use Illuminate\Foundation\Http\FormRequest;
 

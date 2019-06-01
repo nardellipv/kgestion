@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http\Middleware;
+namespace kindergestion\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace gkinder;
+namespace kindergestion;
 
-use gkinder\Notifications\CustomResetPasswordNotification;
+use kindergestion\Notifications\CustomResetPasswordNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 

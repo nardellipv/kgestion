@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use gkinder\Comunication;
+use kindergestion\Comunication;
 
 $factory->define(Comunication::class, function (Faker $faker) {
     return [

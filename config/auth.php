@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => gkinder\User::class,
+            'model' => kindergestion\User::class,
         ],
 
         // 'users' => [

@@ -1,13 +1,13 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\ProfileSchoolRequest;
-use gkinder\Http\Requests\School\ProfileUserRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\ProfileSchoolRequest;
+use kindergestion\Http\Requests\School\ProfileUserRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use gkinder\School;
-use gkinder\User;
+use kindergestion\School;
+use kindergestion\User;
 
 class SchoolController extends Controller
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\TutorUpdateRequest;
-use gkinder\Http\Requests\School\TutorStoreRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\TutorUpdateRequest;
+use kindergestion\Http\Requests\School\TutorStoreRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use gkinder\User;
-use gkinder\Student;
-use gkinder\Tutor;
+use kindergestion\User;
+use kindergestion\Student;
+use kindergestion\Tutor;
 
 class TutorController extends Controller
 {

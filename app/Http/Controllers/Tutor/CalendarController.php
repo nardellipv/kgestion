@@ -1,12 +1,12 @@
 <?php
 
-namespace gkinder\Http\Controllers\Tutor;
+namespace kindergestion\Http\Controllers\Tutor;
 
-use gkinder\Http\Controllers\Controller;
-use gkinder\Student;
-use gkinder\Tutor;
+use kindergestion\Http\Controllers\Controller;
+use kindergestion\Student;
+use kindergestion\Tutor;
 use Jenssegers\Date\Date;
-use gkinder\Calendar;
+use kindergestion\Calendar;
 
 
 class CalendarController extends Controller

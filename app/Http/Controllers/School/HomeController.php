@@ -1,16 +1,17 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
+use ConsoleTVs\Charts\Charts;
 use DB;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Date\Date;
-use gkinder\Message;
-use gkinder\Calendar;
-use gkinder\Student;
-use gkinder\Room;
-use gkinder\Teacher;
+use kindergestion\Message;
+use kindergestion\Calendar;
+use kindergestion\Student;
+use kindergestion\Room;
+use kindergestion\Teacher;
 
 class HomeController extends Controller
 {
@@ -44,6 +45,12 @@ class HomeController extends Controller
             ->where('date_start', '>=', now())
             ->count();
 
+        $cantidadStudent = Charts::database(Student::where('school_id', '=', Auth::User()->school_id)->get(), 'area', 'highcharts')
+            ->setTitle('Cantidad alumnos por Mes')
+            ->setElementLabel("Cantidad")
+            ->setDateColumn('created_at')
+            ->lastByMonth(12, true);
+
         return view('school.home', [
             'rooms' => $rooms,
             'nextEvents' => $nextEvents,
@@ -51,6 +58,7 @@ class HomeController extends Controller
             'countTeachers' => $countTeachers,
             'countMessages' => $countMessages,
             'countEvents' => $countEvents,
+            'cantidadStudent' => $cantidadStudent,
         ]);
     }
 

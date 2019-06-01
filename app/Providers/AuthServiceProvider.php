@@ -1,10 +1,10 @@
 <?php
 
-namespace gkinder\Providers;
+namespace kindergestion\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use gkinder\Policies\SchoolPolicy;
-use gkinder\School;
+use kindergestion\Policies\SchoolPolicy;
+use kindergestion\School;
 use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider

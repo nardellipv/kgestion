@@ -1,9 +1,9 @@
 <?php
 
-namespace gkinder\Http\Controllers\Web;
+namespace kindergestion\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace gkinder\Http\Controllers\Tutor;
+namespace kindergestion\Http\Controllers\Tutor;
 
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Date\Date;
-use gkinder\Tutor;
-use gkinder\Calendar;
-use gkinder\Student;
-use gkinder\School;
+use kindergestion\Tutor;
+use kindergestion\Calendar;
+use kindergestion\Student;
+use kindergestion\School;
 
 
 class HomeController extends Controller

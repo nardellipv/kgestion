@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>G</b>K</span>
+        <span class="logo-mini"><b>K</b>G</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>G</b>Kinder</span>
+        <span class="logo-lg"><b>Kinder</b>Gestión</span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">

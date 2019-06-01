@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Http\Controllers;
+namespace kindergestion\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

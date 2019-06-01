@@ -1,10 +1,10 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Controllers\Controller;
-use gkinder\Http\Requests\NewsLetterRequest;
-use gkinder\NewsLetter;
+use kindergestion\Http\Controllers\Controller;
+use kindergestion\Http\Requests\NewsLetterRequest;
+use kindergestion\NewsLetter;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 

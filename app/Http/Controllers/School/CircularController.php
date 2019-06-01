@@ -1,11 +1,11 @@
 <?php
 
-namespace gkinder\Http\Controllers\School;
+namespace kindergestion\Http\Controllers\School;
 
-use gkinder\Http\Requests\School\CircularRequest;
-use gkinder\Http\Controllers\Controller;
+use kindergestion\Http\Requests\School\CircularRequest;
+use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
-use gkinder\Circular;
+use kindergestion\Circular;
 
 class CircularController extends Controller
 {

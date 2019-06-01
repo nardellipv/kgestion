@@ -1,6 +1,6 @@
 <?php
 
-namespace gkinder\Providers;
+namespace kindergestion\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

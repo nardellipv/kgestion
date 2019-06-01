@@ -1,9 +1,9 @@
 <?php
 
-namespace gkinder\Http\Controllers\Tutor;
+namespace kindergestion\Http\Controllers\Tutor;
 
-use gkinder\Http\Controllers\Controller;
-use gkinder\Circular;
+use kindergestion\Http\Controllers\Controller;
+use kindergestion\Circular;
 
 class CircularController extends Controller
 {

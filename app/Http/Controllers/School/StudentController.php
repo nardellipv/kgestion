@@ -24,10 +24,10 @@ class StudentController extends Controller
 
     public function create()
     {
-        $rooms = Room::where('school_id', '=', auth()->user()->school_id)
+        $rooms = Room::where('school_id', auth()->user()->school_id)
             ->get();
 
-        $tutors = Tutor::where('school_id', '=', auth()->user()->school_id)
+        $tutors = Tutor::where('school_id', auth()->user()->school_id)
             ->get();
 
         return view('school.student.create', compact('rooms', 'tutors', 'rooms'));

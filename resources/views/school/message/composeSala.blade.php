@@ -10,17 +10,17 @@
 
     <div class="box box-solid box-success">
         <div class="box-header with-border">
-            <h3 class="box-title">Enviar Mensaje</h3>
+            <h3 class="box-title">Enviar Mensaje a una Sala</h3>
         </div>
         <div class="box-body">
-            {!! Form::open(['method' => 'POST','route' => ['enviados.store'],'style'=>'display:inline']) !!}
+            {!! Form::open(['method' => 'POST','route' => ['salaStore'],'style'=>'display:inline']) !!}
             {{ csrf_field() }}
             <div class="form-group">
                 <div class="form-group">
-                    <select class="form-control select2" name="tutor_id[]" multiple="multiple" data-placeholder="Padres/Tutores"
+                    <select class="form-control select2" name="room_id[]" multiple="multiple" data-placeholder="Sala"
                             style="width: 100%;">
-                        @foreach($tutors as $tutor)
-                            <option value="{{ $tutor->id }}">{{ $tutor->name }} {{ $tutor->last_name }}</option>
+                        @foreach($rooms as $room)
+                            <option value="{{ $room->id }}">{{ $room->name }}</option>
                         @endforeach
                     </select>
                 </div>

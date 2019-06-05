@@ -26,22 +26,22 @@ class HomeController extends Controller
             ->groupBy('rooms.id')
             ->get();
 
-        $nextEvents = Calendar::where('calendars.school_id', '=', Auth::User()->school_id)
+        $nextEvents = Calendar::where('calendars.school_id', Auth::User()->school_id)
             ->where('date_start', '>=', Date::now()->sub('1 day'))
             ->get();
 
         //counts
-        $countStudents = Student::where('school_id', '=', Auth::User()->school_id)
+        $countStudents = Student::where('school_id', Auth::User()->school_id)
             ->count();
 
-        $countTeachers = Teacher::where('school_id', '=', Auth::User()->school_id)
+        $countTeachers = Teacher::where('school_id', Auth::User()->school_id)
             ->count();
 
-        $countMessages = Message::where('school_id', '=', Auth::User()->school_id)
+        $countMessages = Message::where('school_id', Auth::User()->school_id)
             ->where('read', 'NOREAD')
             ->count();
 
-        $countEvents = Calendar::where('school_id', '=', Auth::User()->school_id)
+        $countEvents = Calendar::where('school_id', Auth::User()->school_id)
             ->where('date_start', '>=', now())
             ->count();
 
@@ -51,6 +51,12 @@ class HomeController extends Controller
             ->setDateColumn('created_at')
             ->lastByMonth(12, true);
 
+        $messageUnRead = Message::with(['tutor'])
+            ->where('school_id', Auth::User()->school_id)
+            ->where('read', 'NOREAD')
+            ->orderBy('date', 'DESC')
+            ->get();
+
         return view('school.home', [
             'rooms' => $rooms,
             'nextEvents' => $nextEvents,
@@ -59,6 +65,7 @@ class HomeController extends Controller
             'countMessages' => $countMessages,
             'countEvents' => $countEvents,
             'cantidadStudent' => $cantidadStudent,
+            'messageUnRead' => $messageUnRead,
         ]);
     }
 

@@ -43,6 +43,9 @@ Route::middleware(['auth','ActiveStatus','UserType','Account'])->group(function 
     Route::get('school/mensajes/responder/{id}', 'School\MessageController@respond')->name('responder');
 
     Route::resource('school/correo/enviados', 'School\ComunicationController');
+    Route::get('school/correo/enviadosSala', 'School\ComunicationController@salaSent')->name('salaSent');
+    Route::get('school/correo/enviados/sala/create', 'School\ComunicationController@salaCreate');
+    Route::post('school/correo/enviados/sala/create', 'School\ComunicationController@salaStore')->name('salaStore');
 
     Route::resource('calendario', 'School\CalendarController');
 

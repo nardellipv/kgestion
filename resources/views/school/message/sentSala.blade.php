@@ -5,7 +5,7 @@
     @endif
     <div class="box box-solid box-success">
         <div class="box-header with-border">
-            <h3 class="box-title">Mensajes Enviados Padres/Tutores</h3>
+            <h3 class="box-title">Mensajes Enviados a Salas</h3>
         </div>
         <div class="box-body no-padding">
             <div class="mailbox-controls">
@@ -18,13 +18,14 @@
                     <tbody>
                     @foreach($comunications as $comunication)
                         <tr>
-                            <td class="mailbox-name"><b>{{$comunication->tutor->name}}</b></td>
+                            <td class="mailbox-name"><b>{{$comunication->name}}</b></td>
                             <td class="mailbox-subject">{{$comunication->title}}</td>
                             <td class="mailbox-attachment"></td>
                             <td class="mailbox-date">{{Date::parse($comunication->date)->diffForHumans()}}</td>
                             <td class="mailbox-date">
                                 <div class="btn-group">
-                                    <a href="{{url('school/correo/enviados', $comunication->id)}}" class="btn btn-info btn-flat"><i
+                                    <a href="{{url('school/correo/enviados', $comunication->id)}}"
+                                       class="btn btn-info btn-flat"><i
                                                 class="fa fa-eye"></i>
                                     </a>
                                     <button type="button" class="btn btn-danger btn-flat" data-toggle="modal"

@@ -25,6 +25,11 @@ class School extends Model
         return $this->hasMany(Calendar::class);
     }
 
+    public function Tutor()
+    {
+        return $this->hasMany(Tutor::class);
+    }
+
     public function Messages()
     {
         return $this->hasMany(Message::class);

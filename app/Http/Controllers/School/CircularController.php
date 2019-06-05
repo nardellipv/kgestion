@@ -2,10 +2,12 @@
 
 namespace kindergestion\Http\Controllers\School;
 
+use Illuminate\Support\Facades\Mail;
 use kindergestion\Http\Requests\School\CircularRequest;
 use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use kindergestion\Circular;
+use kindergestion\Tutor;
 
 class CircularController extends Controller
 {
@@ -13,12 +15,12 @@ class CircularController extends Controller
     public function index()
     {
         $circularesActive = Circular::where('school_id', auth()->user()->school_id)
-            ->where('active','YES')
-            -> get();
+            ->where('active', 'YES')
+            ->get();
 
         $circularesDisable = Circular::where('school_id', auth()->user()->school_id)
-            ->where('active','NO')
-            -> get();
+            ->where('active', 'NO')
+            ->get();
 
         return view('school.circular.index', compact('circularesActive', 'circularesDisable'));
     }
@@ -35,6 +37,16 @@ class CircularController extends Controller
         $circular->date = now();
         $circular->fill($request->all())->save();
 
+        $tutors = Tutor::all();
+
+        foreach ($tutors as $tutor) {
+            Mail::send('email.circularToTutor', ['tutor' => $tutor, 'circular' => $circular], function ($msj) use ($tutor, $circular) {
+                $msj->from('no-respond@kindergestion.com');
+                $msj->subject('Mensaje de KinderGestión');
+                $msj->to($tutor->email, $tutor->name);
+            });
+        }
+
         Session::flash('message', 'Circular creada y publicada correctamente');
         return back();
     }
@@ -45,7 +57,7 @@ class CircularController extends Controller
         $circular->active = 'NO';
         $circular->save();
 
-        Session::flash('message', 'Circular '. $circular->title .' despublicada correctamente');
+        Session::flash('message', 'Circular ' . $circular->title . ' despublicada correctamente');
         return back();
     }
 

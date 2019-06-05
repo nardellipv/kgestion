@@ -19,4 +19,9 @@ class Tutor extends Model
     {
         return $this->hasMany(Student::class);
     }
+
+    public function School()
+    {
+        return $this->belongsTo(School::class);
+    }
 }

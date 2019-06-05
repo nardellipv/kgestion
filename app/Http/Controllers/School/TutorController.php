@@ -14,7 +14,7 @@ class TutorController extends Controller
 {
     public function index()
     {
-        $tutors = Tutor::where('school_id', '=', auth()->user()->school_id)
+        $tutors = Tutor::where('school_id', auth()->user()->school_id)
             ->get();
 
         return view('school.tutor.index', compact('tutors'));
@@ -61,9 +61,12 @@ class TutorController extends Controller
     public function show($id)
     {
         $tutor = Tutor::find($id);
-        $students = $tutor->students;
 
-        $otherStudent = Student::where('school_id', '=', auth()->user()->school_id)
+        $students = Student::with(['room'])
+            ->where('tutor_id', $tutor->id)
+            ->get();
+
+        $otherStudent = Student::where('school_id', auth()->user()->school_id)
             ->get();
 
         return view('school.tutor.show', compact('tutor', 'students', 'otherStudent'));

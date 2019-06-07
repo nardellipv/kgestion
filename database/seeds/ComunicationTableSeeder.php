@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use gkinder\Comunication;
+use kindergestion\Comunication;
 
 class ComunicationTableSeeder extends Seeder
 {

@@ -15,6 +15,7 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                @if(Request::is('school/home'))
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
@@ -32,7 +33,6 @@
                                                 {{ str_limit($message->tutor->name,15) }}
                                                 <small><i class="fa fa-clock-o"></i> {{ Date::parse($message->date)->diffForHumans() }}</small>
                                             </h4>
-                                            <p>Why not buy a new awesome theme?</p>
                                         </a>
                                     </li>
                                 @endforeach
@@ -41,6 +41,7 @@
                         <li class="footer"><a href="{{url('school/mensajes')}}">Ver todos los mensajes</a></li>
                     </ul>
                 </li>
+                @endif
                 <!-- User Account Menu -->
                 <li class="dropdown user user-menu">
                     <!-- Menu Toggle Button -->
@@ -53,7 +54,7 @@
                     <ul class="dropdown-menu">
                         <!-- The user image in the menu -->
                         <li class="user-header">
-                            <img src="{{ asset('dist/img/logo-profile.png') }}" class="img-circle" alt="imagen-perfil">
+                            <img src="{{ asset('dist/img/logo_sintexto.png') }}" class="img-circle" alt="imagen-perfil">
                             <p>
                                 {{Auth::user()->name}}-{{Auth::user()->user_type}}
                                 <small>Miembro desde {{Auth::user()->created_at->format('d/m/y')}}</small>

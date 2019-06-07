@@ -28,6 +28,8 @@
             <div class="form-group">
                 <label>Sala</label>
                 <select class="form-control" name="room_id" required>
+                    <option value="{{$calendar->room->id}}">{{$calendar->room->name}}</option>
+                    <option disabled>-------------------</option>
                     @foreach($rooms as $room)
                         <option value="{{$room->id}}">{{$room->name}}</option>
                     @endforeach

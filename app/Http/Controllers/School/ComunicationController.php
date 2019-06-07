@@ -18,7 +18,7 @@ class ComunicationController extends Controller
     {
         $comunications = Comunication::with(['tutor'])
             ->where('school_id', auth()->user()->school_id)
-            ->where('tutor_id','!=',NULL)
+            ->where('tutor_id', '!=', NULL)
             ->orderBy('date', 'DESC')
             ->paginate(10);
 
@@ -28,7 +28,7 @@ class ComunicationController extends Controller
     public function salaSent()
     {
         $comunications = Comunication::with(['tutor'])
-            ->join('rooms','comunications.room_id','=','rooms.id')
+            ->join('rooms', 'comunications.room_id', '=', 'rooms.id')
             ->where('comunications.school_id', auth()->user()->school_id)
             ->orderBy('date', 'DESC')
             ->paginate(10);
@@ -100,15 +100,11 @@ class ComunicationController extends Controller
             $comunication->date = now();
             $comunication->title = $request['subject'];
             $comunication->body = $request['body'];
+            $comunication->tutor_id = $students->tutor_id;
             $comunication->room_id = $room;
             $comunication->read = 'NOREAD';
             $comunication->save();
 
-            Mail::send('email.sendToTutor', ['dataTutor' => $dataTutor], function ($msj) use ($dataTutor) {
-                $msj->from('no-respond@kindergestion.com');
-                $msj->subject('Mensaje de KinderGestión');
-                $msj->to($dataTutor->email, $dataTutor->name);
-            });
         }
 
         Session::flash('message', 'El mensaje <b>' . $comunication->title . '</b> fue enviado correctamente');

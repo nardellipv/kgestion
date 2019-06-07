@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\NewsLetter;
+use kindergestion\NewsLetter;
 use Illuminate\Database\Seeder;
 
 class NewsLetterTableSeeder extends Seeder

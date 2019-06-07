@@ -31,7 +31,7 @@
                                value="{{old('email')}}" required>
                     </div>
                     <div class="form-group">
-                        <select name="room_id" class="form-control input-lg" required>
+                        <select name="room_id" class="form-control input-lg">
                             <option value="">Asignar una sala</option>
 
                             @foreach ($rooms as $room)

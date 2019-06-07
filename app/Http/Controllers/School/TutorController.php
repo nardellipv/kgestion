@@ -80,7 +80,6 @@ class TutorController extends Controller
         $tutor->last_name = $request['apellido'];
         $tutor->phone = $request['telefono'];
         $tutor->address = $request['direccion'];
-//        $tutor->email = $request['email'];
         $tutor->observation = $request['observation'];
 
         if ($request->student_id) {
@@ -92,6 +91,13 @@ class TutorController extends Controller
         }
 
         $tutor->update();
+
+        if($request->password){
+            $pass = User::where('email',$tutor->email)
+                ->first();
+            $pass->password = bcrypt($request['password']);
+            $pass->update();
+        }
 
         Session::flash('message', 'Perfil editado correctamente');
         return back();

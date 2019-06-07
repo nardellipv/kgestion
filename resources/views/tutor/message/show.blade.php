@@ -26,10 +26,13 @@
 
                 <div class="box-footer">
                     <div class="pull-right">
-                        <a href="{{url('tutor/mensajes/responder', $message->id)}}" class="btn btn-default"><i class="fa fa-reply"></i> Responder</a>
+                        <a href="{{url('tutor/mensajes/responder', $message->id)}}" class="btn btn-default"><i
+                                    class="fa fa-reply"></i> Responder</a>
                     </div>
                     <a href="{{url('tutor/mensajes')}}" class="btn btn-default"><i class="fa fa-times"></i> Canceler</a>
-                    <button type="button" onclick="myFunction()" class="btn btn-default"><i class="fa fa-print"></i> Imprimir</button>
+                    <button type="button" onclick="myFunction()" class="btn btn-default"><i class="fa fa-print"></i>
+                        Imprimir
+                    </button>
                 </div>
             </div>
         </section>

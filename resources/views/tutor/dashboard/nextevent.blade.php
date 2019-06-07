@@ -3,7 +3,7 @@
 @endsection
 <div class="box box-solid box-success">
     <div class="box-header">
-        <h3 class="box-title">Próximos Eventos</h3>
+        <h3 class="box-title">Próximos Eventos del Jardín</h3>
     </div>
     <!-- /.box-header -->
     <div class="box-body">

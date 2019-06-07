@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use kindergestion\Comunication;
 use kindergestion\Message;
+use kindergestion\Room_Tutor;
 use kindergestion\School;
+use kindergestion\Student;
 use kindergestion\Tutor;
 
 class MessageController extends Controller
@@ -20,10 +22,27 @@ class MessageController extends Controller
             ->first();
 
         $messages = Comunication::where('tutor_id', $tutorId->id)
-            ->orderBy('date', 'desc')
+            ->where('room_id', NULL)
+            ->orderBy('date', 'DESC')
             ->paginate(10);
 
         return view('tutor.message.index', compact('messages'));
+    }
+
+    public function messageSala()
+    {
+
+        $tutorId = Tutor::where('email', Auth::user()->email)
+            ->first();
+
+        $messages = Comunication::where('tutor_id', $tutorId->id)
+            ->where('room_id', '!=', NULL)
+            ->orderBy('date', 'DESC')
+            ->paginate(10);
+
+
+
+        return view('tutor.message.mensajesSala', compact('messages'));
     }
 
     public function create()

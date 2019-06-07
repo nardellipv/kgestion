@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\Student;
+use kindergestion\Student;
 use Illuminate\Database\Seeder;
 
 class StudentTableSeeder extends Seeder

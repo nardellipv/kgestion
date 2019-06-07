@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Jenssegers\Date\Date;
 use kindergestion\Message;
 use kindergestion\Calendar;
+use kindergestion\School;
 use kindergestion\Student;
 use kindergestion\Room;
 use kindergestion\Teacher;
@@ -26,7 +27,8 @@ class HomeController extends Controller
             ->groupBy('rooms.id')
             ->get();
 
-        $nextEvents = Calendar::where('calendars.school_id', Auth::User()->school_id)
+        $nextEvents = Calendar::with(['Room'])
+            ->where('calendars.school_id', Auth::User()->school_id)
             ->where('date_start', '>=', Date::now()->sub('1 day'))
             ->get();
 
@@ -57,6 +59,10 @@ class HomeController extends Controller
             ->orderBy('date', 'DESC')
             ->get();
 
+        $profileSchool = School::where('id', Auth::User()->school_id)
+            ->where('address', '!=', NULL)
+            ->first();
+
         return view('school.home', [
             'rooms' => $rooms,
             'nextEvents' => $nextEvents,
@@ -66,6 +72,7 @@ class HomeController extends Controller
             'countEvents' => $countEvents,
             'cantidadStudent' => $cantidadStudent,
             'messageUnRead' => $messageUnRead,
+            'profileSchool' => $profileSchool,
         ]);
     }
 

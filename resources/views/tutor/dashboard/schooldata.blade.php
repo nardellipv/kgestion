@@ -2,7 +2,7 @@
     <div class="col-md-6 col-md-offset-3">
         <div class="box box-widget widget-user-2">
             <div class="widget-user-header bg-yellow">
-                <h3 class="widget-user-username">{{ $school->name }}</h3>
+                <h3 class="widget-user-username">Datos de {{ $school->name }}</h3>
                 <h5 class="widget-user-desc">{{ $school->url }}</h5>
             </div>
             <div class="box-footer no-padding">

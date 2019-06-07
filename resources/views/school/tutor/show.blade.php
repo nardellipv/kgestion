@@ -128,6 +128,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="phone" class="col-sm-2 control-label">Contraseña</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" name="password" class="form-control" id="pass"
+                                        placeholder="Resetear Contraseña">
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="observation" class="col-sm-2 control-label">Observaciones</label>
                                     <div class="form-group">
                                         <textarea name="observation" class="form-control"

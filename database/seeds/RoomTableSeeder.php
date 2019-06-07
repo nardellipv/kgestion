@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\Room;
+use kindergestion\Room;
 use Illuminate\Database\Seeder;
 
 class RoomTableSeeder extends Seeder

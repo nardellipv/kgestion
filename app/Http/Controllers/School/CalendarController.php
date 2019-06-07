@@ -13,7 +13,7 @@ use kindergestion\Room;
 class CalendarController extends Controller
 {
 
-    public  function __construct()
+    public function __construct()
     {
         Date::setLocale('es');
     }
@@ -41,13 +41,9 @@ class CalendarController extends Controller
 
     public function store(CalendarStoreRequest $request)
     {
-//       dd($request->all());
 
         $date_start = substr($request->date_range, 0, 16);
         $date_end = substr($request->date_range, 22, 16);
-
-
-//dd($date_end);
 
         $calendar = new Calendar;
         $calendar->activity = $request['activity'];
@@ -70,13 +66,13 @@ class CalendarController extends Controller
         $rooms = Room::where('school_id', auth()->user()->school_id)
             ->get();
 
-        return view('school.calendar.edit', compact('calendar','rooms'));
+        return view('school.calendar.edit', compact('calendar', 'rooms'));
     }
 
 
     public function update(CalendarUpdateRequest $request, $id)
     {
-
+//dd($request->all());
         $calendar = Calendar::find($id);
 
         $calendar->fill($request->all())->update();

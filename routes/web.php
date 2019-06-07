@@ -1,13 +1,5 @@
 <?php
 
-/*Route::get('/', function () {
-    return redirect()->route('login');
-});*/
-
-//log
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-//------------
-
 //web
 Route::get('/', 'Web\FrontController@index')->name('index');
 Route::get('/login', 'Web\FrontController@login')->name('login');
@@ -24,7 +16,7 @@ Route::post('contactmail', 'ContactMailController@send')->name('contactmail');
 Auth::routes();
 
 //jardin
-Route::middleware(['auth','ActiveStatus','UserType','Account'])->group(function () {
+Route::middleware(['auth', 'ActiveStatus', 'UserType', 'Account'])->group(function () {
 
     Route::get('school/home', 'School\HomeController@view')->name('home');
     Route::resource('school/salas', 'School\RoomController');
@@ -56,12 +48,12 @@ Route::middleware(['auth','ActiveStatus','UserType','Account'])->group(function 
 });
 
 
-
 //tutor
 Route::middleware(['auth'])->group(function () {
 
     Route::get('tutor/home', 'Tutor\HomeController@view')->name('home');
 
+    Route::get('tutor/mensajes/mensajes-sala', 'Tutor\MessageController@messageSala')->name('messageSala');
     Route::resource('tutor/mensajes', 'Tutor\MessageController');
     Route::get('tutor/mensajes/responder/{id}', 'Tutor\MessageController@respond')->name('responder');
 

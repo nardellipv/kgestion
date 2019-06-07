@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MessageTableSeeder::class);
         $this->call(NewsLetterTableSeeder::class);
         $this->call(ComunicationTableSeeder::class);
+        $this->call(RoomTutorSeeder::class);
     }
 }

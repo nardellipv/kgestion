@@ -6,6 +6,7 @@ use kindergestion\Http\Requests\School\StudentRequest;
 use kindergestion\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use kindergestion\Room_Tutor;
 use kindergestion\Student;
 use kindergestion\Tutor;
 use kindergestion\Room;
@@ -35,6 +36,11 @@ class StudentController extends Controller
 
     public function store(StudentRequest $request)
     {
+
+        $roomTutor = new Room_Tutor;
+        $roomTutor->room_id = $request['room_id'];
+        $roomTutor->tutor_id = $request['tutor_id'];
+        $roomTutor->save();
 
         $student = new Student;
         $student->name = $request['nombre'];

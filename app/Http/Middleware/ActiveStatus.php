@@ -17,7 +17,7 @@ class ActiveStatus
      */
     public function handle($request, Closure $next)
     {
-        $school = School::where('schools.id', '=', Auth::user()->school_id)
+        $school = School::where('schools.id', Auth::user()->school_id)
             ->first();
 
         if($school->active == 'DISABLE'){

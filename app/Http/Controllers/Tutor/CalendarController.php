@@ -22,12 +22,13 @@ class CalendarController extends Controller
             ->first();
 
         $students = Student::where('tutor_id', $tutorId->id)
-            ->first();
+            ->get();
 
         if ($students != null) {
-            $calendars = Calendar::where('school_id', auth()->user()->school_id)
-                ->where('room_id', $students->room_id)
-                ->get();
+            foreach ($students as $student) {
+                $calendars = Calendar::where('school_id', auth()->user()->school_id)
+                    ->get();
+            }
 
             return view('tutor.eventos.index', compact('calendars'));
         }

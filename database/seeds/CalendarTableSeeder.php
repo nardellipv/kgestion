@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\Calendar;
+use kindergestion\Calendar;
 use Illuminate\Database\Seeder;
 
 class CalendarTableSeeder extends Seeder

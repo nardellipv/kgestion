@@ -1,6 +1,6 @@
 <?php
 
-use gkinder\Message;
+use kindergestion\Message;
 use Illuminate\Database\Seeder;
 
 class MessageTableSeeder extends Seeder

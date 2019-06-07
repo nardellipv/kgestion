@@ -37,7 +37,8 @@ class CircularController extends Controller
         $circular->date = now();
         $circular->fill($request->all())->save();
 
-        $tutors = Tutor::all();
+        $tutors = Tutor::where('school_id', auth()->user()->school_id)
+            ->get();
 
         foreach ($tutors as $tutor) {
             Mail::send('email.circularToTutor', ['tutor' => $tutor, 'circular' => $circular], function ($msj) use ($tutor, $circular) {

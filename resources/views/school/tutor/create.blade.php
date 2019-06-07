@@ -8,7 +8,6 @@
     <div class="box-header with-border">
         <h3 class="box-title">Agregar nuevo tutor</h3>
     </div>
-    <!-- /.box-header -->
     <div class="box-body">
         {!! Form::open(['method' => 'POST','route' => ['tutores.store'],'style'=>'display:inline']) !!} {{ csrf_field() }}
         <div class="row">

@@ -8,7 +8,6 @@
             <a href="{{ url('school/calendario/create') }}" type="button" class="btn btn-block btn-info">Crear Evento</a>
         </div>
     </div>
-    <!-- /.box-header -->
     <div class="box-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>

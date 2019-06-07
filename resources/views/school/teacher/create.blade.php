@@ -8,7 +8,6 @@
         <div class="box-header with-border">
             <h3 class="box-title">Agregar nuevo docente</h3>
         </div>
-        <!-- /.box-header -->
         <div class="box-body">
             {!! Form::open(['method' => 'POST','route' => ['profesores.store'],'style'=>'display:inline','enctype' => 'multipart/form-data' ]) !!}
             {{ csrf_field() }}

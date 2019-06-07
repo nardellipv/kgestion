@@ -27,7 +27,7 @@ class HomeController extends Controller
         $tutorId = Tutor::where('email', Auth::user()->email)
             ->first();
 
-        $students = Student::with(['room'])
+        $students = Student::with(['room','school'])
             ->where('tutor_id', $tutorId->id)
             ->get();
 

@@ -14,7 +14,7 @@ class RoomController extends Controller
 
     public function create()
     {
-        $teachers = Teacher::where('school_id', '=', Auth::User()->school_id)
+        $teachers = Teacher::where('school_id', Auth::User()->school_id)
             ->get();
 
         return view('school.room.create', compact('teachers'));

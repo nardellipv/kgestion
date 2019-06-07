@@ -4,8 +4,10 @@
             <div class="box box-primary">
                 <div class="box-body box-profile">
                     @if($student->photo)
-                        <a href="{{asset ($student->photo)}}" target="_blank">
-                            <img class="img-responsive img-rectangle" src="{{asset ($student->photo)}}"
+                        <a href="{{asset ('images/'. $student->school->name.'-'.$student->school->id.'/icons/students/'. $student->photo)}}"
+                           target="_blank">
+                            <img class="img-responsive img-rectangle"
+                                 src="{{asset ('images/thumbnail/'. $student->school->name . $student->photo)}}"
                                  alt="fotoUsuario">
                         </a>
                     @else

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use kindergestion\Room;
 use kindergestion\Teacher;
+use Image;
 
 class TeacherController extends Controller
 {
@@ -44,8 +45,21 @@ class TeacherController extends Controller
 
         if ($request->file) {
 
-            $path = Storage::disk('public')->put('fotos/profesores', $request->file);
-            $teacher->photo = $path;
+            if ($request->file) {
+
+                $image = $request->file('file');
+                $input['file'] = time() . '.' . $image->getClientOriginalExtension();
+
+                $destinationPath = 'images/thumbnail/'. auth()->user()->name;
+                $img = Image::make($image->getRealPath());
+                $img->resize(250, 250)->save($destinationPath . $input['file']);
+
+                $destinationPath = 'images/' . auth()->user()->name . '-' . auth()->user()->id . '/icons/teachers';
+                $image->move($destinationPath, $input['file']);
+
+                $teacher->photo = $input['file'];
+
+            }
         }
         $teacher->save();
 
@@ -81,9 +95,17 @@ class TeacherController extends Controller
         $teacher->observation = $request['observation'];
 
         if ($request->file) {
+            $image = $request->file('file');
+            $input['file'] = time() . '.' . $image->getClientOriginalExtension();
 
-            $path = Storage::disk('public')->put('fotos/profesores', $request->file);
-            $teacher->photo = $path;
+            $destinationPath = 'images/thumbnail/'. auth()->user()->name;
+            $img = Image::make($image->getRealPath());
+            $img->resize(250, 250)->save($destinationPath . $input['file']);
+
+            $destinationPath = 'images/' . auth()->user()->name . '-' . auth()->user()->id . '/icons/teachers';
+            $image->move($destinationPath, $input['file']);
+
+            $teacher->photo = $input['file'];
         }
         $teacher->update();
 

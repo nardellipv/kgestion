@@ -4,7 +4,6 @@
     <div class="box-header with-border">
         <h3 class="box-title">Agregar nueva Sala</h3>
     </div>
-    <!-- /.box-header -->
     <div class="box-body">
         {!! Form::open(['method' => 'POST','route' => ['salas.store'],'style'=>'display:inline']) !!}
         {{ csrf_field() }}

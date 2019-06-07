@@ -10,6 +10,7 @@ use kindergestion\Room_Tutor;
 use kindergestion\Student;
 use kindergestion\Tutor;
 use kindergestion\Room;
+use Image;
 
 class StudentController extends Controller
 {
@@ -17,7 +18,7 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::with(['room', 'tutor'])
-            ->where('school_id', '=', auth()->user()->school_id)
+            ->where('school_id', auth()->user()->school_id)
             ->get();
 
         return view('school.student.index', compact('students'));
@@ -55,8 +56,17 @@ class StudentController extends Controller
 
         if ($request->file) {
 
-            $path = Storage::disk('public')->put('fotos/alumnos', $request->file);
-            $student->photo = $path;
+            $image = $request->file('file');
+            $input['file'] = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = 'images/thumbnail/'. auth()->user()->name;
+            $img = Image::make($image->getRealPath());
+            $img->resize(250, 250)->save($destinationPath . $input['file']);
+
+            $destinationPath = 'images/' . auth()->user()->name . '-' . auth()->user()->id . '/icons/students';
+            $image->move($destinationPath, $input['file']);
+
+            $student->photo = $input['file'];
 
         }
 
@@ -103,10 +113,20 @@ class StudentController extends Controller
 
         if ($request->file) {
 
-            $path = Storage::disk('public')->put('fotos/alumnos', $request->file);
+            $image = $request->file('file');
+            $input['file'] = time() . '.' . $image->getClientOriginalExtension();
 
-            $student->photo = $path;
+            $destinationPath = 'images/thumbnail/'. auth()->user()->name;
+            $img = Image::make($image->getRealPath());
+            $img->resize(250, 250)->save($destinationPath . $input['file']);
+
+            $destinationPath = 'images/' . auth()->user()->name . '-' . auth()->user()->id . '/icons/students';
+            $image->move($destinationPath, $input['file']);
+
+            $student->photo = $input['file'];
+
         }
+
         $student->update();
 
         Session::flash('message', 'Perfil editado correctamente');

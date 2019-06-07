@@ -13,6 +13,7 @@ use kindergestion\School;
 use kindergestion\Student;
 use kindergestion\Room;
 use kindergestion\Teacher;
+use kindergestion\Tutor;
 
 class HomeController extends Controller
 {
@@ -63,6 +64,12 @@ class HomeController extends Controller
             ->where('address', '!=', NULL)
             ->first();
 
+        $tutors = Tutor::where('school_id', auth()->user()->school_id)
+            ->get();
+
+        $teachers = Teacher::where('school_id', Auth::User()->school_id)
+            ->get();
+
         return view('school.home', [
             'rooms' => $rooms,
             'nextEvents' => $nextEvents,
@@ -73,6 +80,8 @@ class HomeController extends Controller
             'cantidadStudent' => $cantidadStudent,
             'messageUnRead' => $messageUnRead,
             'profileSchool' => $profileSchool,
+            'tutors' => $tutors,
+            'teachers' => $teachers,
         ]);
     }
 

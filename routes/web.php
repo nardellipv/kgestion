@@ -4,6 +4,8 @@
 Route::get('/', 'Web\FrontController@index')->name('index');
 Route::get('/login', 'Web\FrontController@login')->name('login');
 
+Route::get('/blog', 'Web\BlogController@blog')->name('blog');
+Route::get('/blog/{slug}', 'Web\BlogController@post');
 
 Route::post('newsletter', 'School\NewsLetterController@store')->name('newsLetter');
 

@@ -6,9 +6,9 @@
                 <div class="col-lg-9">
                     <div class="meta pt-15 text-center text-lg-left">
                         <ul>
-                            <li><i class="fa fa-envelope"></i> support@contact.com</li>
-                            <li><i class="fa fa-phone"></i> +880 17162 48413</li>
-                            <li><i class="fa fa-clock-o"></i> Sun - Fri : 9.00 am to 18.pm (Sat Weekend)</li>
+                            <li><i class="fa fa-envelope"></i> info@kindergestion.com</li>
+                            <li><i class="fa fa-phone"></i> +54 9 2615965966</li>
+                            <li><i class="fa fa-clock-o"></i> Lunes - Viernes : 9.00 am a 6.00 pm</li>
                         </ul>
                     </div> <!-- meta -->
                 </div>

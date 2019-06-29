@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e10cdc0040f8c27354a59bae16ea72c",
+    "content-hash": "65c8be638477ab7ca65efce9782c1a8e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -316,6 +316,55 @@
                 "parser"
             ],
             "time": "2019-03-17T18:48:37+00:00"
+        },
+        {
+            "name": "eyuva/laravel-whatsapp-btn",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eyuva/laravel-whatsapp-btn.git",
+                "reference": "1089d57eab31e8b40ec02f947d3ee1efdc5b1b45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eyuva/laravel-whatsapp-btn/zipball/1089d57eab31e8b40ec02f947d3ee1efdc5b1b45",
+                "reference": "1089d57eab31e8b40ec02f947d3ee1efdc5b1b45",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.2",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Eyuva\\WhatsappBtn\\WhatsappBtnServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eyuva\\WhatsappBtn\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vishal Sancheti",
+                    "email": "mail@vishal.pro",
+                    "homepage": "https://eyuva.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package to make click to chat whatsapp button",
+            "time": "2019-03-06T12:35:52+00:00"
         },
         {
             "name": "fideloper/proxy",

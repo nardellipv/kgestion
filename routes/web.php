@@ -18,7 +18,7 @@ Route::post('contactmail', 'ContactMailController@send')->name('contactmail');
 Auth::routes();
 
 //jardin
-Route::middleware(['auth', 'ActiveStatus', 'UserType', 'Account'])->group(function () {
+Route::middleware(['auth', 'ActiveStatus', 'Account'])->group(function () {
 
     Route::get('school/home', 'School\HomeController@view')->name('home');
     Route::resource('school/salas', 'School\RoomController');
@@ -49,6 +49,24 @@ Route::middleware(['auth', 'ActiveStatus', 'UserType', 'Account'])->group(functi
 
 });
 
+//ROOT
+Route::middleware(['auth'])->group(function () {
+    Route::get('root/home', 'Root\HomeController@home')->name('root.home');
+
+    Route::get('root/lista', 'Root\BlogController@list')->name('list');
+    Route::get('root/lista/edit/{id}', 'Root\BlogController@show')->name('blog.show');
+    Route::post('root/lista/update/{id}', 'Root\BlogController@update')->name('blog.update');
+    Route::get('root/lista/create', 'Root\BlogController@create')->name('blog.create');
+    Route::post('root/lista/store', 'Root\BlogController@store')->name('blog.store');
+    Route::get('root/lista/active/{id}', 'Root\BlogController@active')->name('blog.active');
+    Route::get('root/lista/desactive/{id}', 'Root\BlogController@desactive')->name('blog.desactive');
+    Route::get('root/lista/delete/post/{id}', 'Root\BlogController@destroy')->name('blog.destroy');
+
+    Route::get('root/lista/images', 'Root\PhotoController@photoList')->name('photo.list');
+    Route::get('root/lista/addPhotoView', 'Root\PhotoController@addPhotoView')->name('photo.addPhotoView');
+    Route::post('root/lista/add', 'Root\PhotoController@addPhoto')->name('photo.add');
+    Route::get('root/lista/delete/photo/{id}', 'Root\PhotoController@destroy')->name('photo.destroy');
+});
 
 //tutor
 Route::middleware(['auth'])->group(function () {

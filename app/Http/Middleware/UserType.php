@@ -20,13 +20,28 @@ class UserType
         $userType = User::where('id', Auth::user()->id)
             ->first();
 
-        if($userType->user_type === 'TUTOR'){
+       /* if($userType->user_type === 'TUTOR'){
 
             return redirect('/tutor/home');
-        }else{
-
-            return $next($request);
         }
+        elseif($userType->user_type === 'ROOT') {
+            return redirect('/root/home');
+        }
+        else{
+            return $next($request);
+        }*/
+        switch($userType) {
+            case $userType->user_type === 'TUTOR':
+                return view('/tutor/home');
+                break;
+            case $userType->user_type === 'ADMIN':
+                return '/school/home';
+                break;
+            case $userType->user_type === 'ROOT':
+                return '/root/home';
+                break;
+        }
+        return $next($request);
 
     }
 }

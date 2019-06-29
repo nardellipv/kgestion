@@ -19,7 +19,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="singel-news mt-30">
                         <div class="news-thumb">
-                            <img src="{{ $post->photo }}" alt="Latest News">
+                            <img src="{{ asset('front/images/blog/') }}" alt="Latest News">
                         </div>
                         <div class="news-content">
                             <div class="share">

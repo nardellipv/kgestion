@@ -156,6 +156,7 @@ return [
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         kindergestion\Providers\ComposerServicePorvider::class,
         ConsoleTVs\Charts\ChartsServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

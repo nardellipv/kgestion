@@ -4,6 +4,8 @@ namespace kindergestion\Http\Controllers\Auth;
 
 use kindergestion\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use kindergestion\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class LoginController extends Controller
@@ -26,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/school/home';
+//    protected $redirectTo = '/school/home';
 
     /**
      * Create a new controller instance.
@@ -36,6 +38,24 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function redirectPath()
+    {
+        $userType = User::where('id', Auth::user()->id)
+            ->first();
+
+        switch ($userType) {
+            case $userType->user_type === 'TUTOR':
+                return '/tutor/home';
+                break;
+            case $userType->user_type === 'ADMIN':
+                return '/school/home';
+                break;
+            case $userType->user_type === 'ROOT':
+                return '/root/home';
+                break;
+        }
     }
 
 }

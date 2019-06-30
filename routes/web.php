@@ -66,6 +66,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('root/lista/addPhotoView', 'Root\PhotoController@addPhotoView')->name('photo.addPhotoView');
     Route::post('root/lista/add', 'Root\PhotoController@addPhoto')->name('photo.add');
     Route::get('root/lista/delete/photo/{id}', 'Root\PhotoController@destroy')->name('photo.destroy');
+
+    Route::get('root/mensajes', 'Root\MessageAdminClientController@listaMessage')->name('list.message');
+    Route::get('root/mensajes/agregar', 'Root\MessageAdminClientController@addMessage')->name('add.message');
+    Route::post('root/mensajes/add', 'Root\MessageAdminClientController@storeMessage')->name('store.message');
 });
 
 //tutor

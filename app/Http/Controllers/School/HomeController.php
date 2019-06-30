@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Jenssegers\Date\Date;
 use kindergestion\Message;
 use kindergestion\Calendar;
+use kindergestion\MessageAdminClient;
 use kindergestion\School;
 use kindergestion\Student;
 use kindergestion\Room;
@@ -60,6 +61,11 @@ class HomeController extends Controller
             ->orderBy('date', 'DESC')
             ->get();
 
+        $messageAdminClients = MessageAdminClient::where('school_id', Auth::User()->school_id)
+            ->orWhere('school_id', NULL)
+            ->orderBy('created_at', 'DESC')
+            ->get();
+
         $profileSchool = School::where('id', Auth::User()->school_id)
             ->where('address', '!=', NULL)
             ->first();
@@ -82,6 +88,7 @@ class HomeController extends Controller
             'profileSchool' => $profileSchool,
             'tutors' => $tutors,
             'teachers' => $teachers,
+            'messageAdminClients' => $messageAdminClients,
         ]);
     }
 

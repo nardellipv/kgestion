@@ -13,7 +13,7 @@
     <title>NIKNA – Business Consulting HTML Template</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('front/assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">

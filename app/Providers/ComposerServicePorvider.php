@@ -24,6 +24,9 @@ class ComposerServicePorvider extends ServiceProvider
         View::composer(['tutor.menu.menu'], 'kindergestion\Http\CounterView\CounterCircular');
 
         View::composer(['layouts.nav'], 'kindergestion\Http\CounterView\CounterMails');
+
+        View::composer(['layouts.nav'], 'kindergestion\Http\CounterView\CounterMessageAdminClient');
+
     }
 
     /**

@@ -16,39 +16,65 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 @if(Request::is('school/home'))
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">{{ $message }}</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">Tiene {{ $message }} mail sin leer</li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu">
-                                @foreach($messageUnRead as $message)
-                                    <li>
-                                        <a href="#">
-                                            <h4>
-                                                {{ str_limit($message->tutor->name,15) }}
-                                                <small><i class="fa fa-clock-o"></i> {{ Date::parse($message->date)->diffForHumans() }}</small>
-                                            </h4>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        <li class="footer"><a href="{{url('school/mensajes')}}">Ver todos los mensajes</a></li>
-                    </ul>
-                </li>
-                @endif
-                <!-- User Account Menu -->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">{{ $message }}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">Tiene {{ $message }} mail sin leer</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    @foreach($messageUnRead as $message)
+                                        <li>
+                                            <a href="#">
+                                                <h4>
+                                                    {{ str_limit($message->tutor->name,15) }}
+                                                    <small>
+                                                        <i class="fa fa-clock-o"></i> {{ Date::parse($message->date)->diffForHumans() }}
+                                                    </small>
+                                                </h4>
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="{{url('school/mensajes')}}">Ver todos los mensajes</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">{{ $messageAdminClient }}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">Tiene {{ $messageAdminClient }} mensajes del sistema</li>
+                            <li>
+                                <ul class="menu">
+                                    @foreach($messageAdminClients as $messageAdminClient)
+                                        <li>
+                                            <a href="#">
+                                                <p>{{ $messageAdminClient->title }}</p>
+                                                <small>{!! $messageAdminClient->body !!}</small>
+                                                <small>
+                                                    <i class="fa fa-clock-o"></i> {{ Date::parse($messageAdminClient->created_at)->diffForHumans() }}
+                                                </small>
+
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+            @endif
+            <!-- User Account Menu -->
                 <li class="dropdown user user-menu">
                     <!-- Menu Toggle Button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <!-- The user image in the navbar-->
-                    {{-- <img src="{{ asset('dist/img/logo-profile.png') }}" class="img-circle" alt="imagen-perfil">--}}
-                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
                         <span class="hidden-xs">{{Auth::user()->name}} <i class="fa fa-angle-down"></i></span>
                     </a>
                     <ul class="dropdown-menu">

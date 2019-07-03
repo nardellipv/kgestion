@@ -29,11 +29,11 @@
 
 <h1>Fin período de prueba</h1>
 <div class="w3layout-agileits">
-    <h4>Lamentablemente se supero el período de 60 días de prueba. </h4>
+    <h4>Lamentablemente se supero el período de 30 días de prueba. </h4>
     <h4>Si desea contratar el servicio puede comunicarse con nosotros:</h4>
     <br>
     <p><i class="fa fa-phone"></i> 2615965966 </p>
-    <p><i class="fa fa-envelope"></i> comercial@gkinder.com </p>
+    <p><i class="fa fa-envelope"></i> comercial@kindergestion.com </p>
     <a href="javascript:history.back()"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Volver</a>
 </div>
 

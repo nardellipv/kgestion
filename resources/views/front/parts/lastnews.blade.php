@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center pb-20">
-                    <h3>Latest News</h3>
+                    <h3>Últimos Posts</h3>
                     <div class="underline">
                         <span></span>
                         <span></span>

@@ -16,9 +16,6 @@
                     <div class="social-icon text-center text-lg-right pt-15">
                         <ul>
                             <li><a href="index.html#"><i class="flaticon-facebook"></i></a></li>
-                            <li><a href="index.html#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-                            <li><a href="index.html#"><i class="flaticon-google-plus"></i></a></li>
-                            <li><a href="index.html#"><i class="flaticon-linkedin-logo"></i></a></li>
                             <li><a href="index.html#"><i
                                             class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a></li>
                         </ul>
@@ -37,7 +34,7 @@
                 <div class="col-lg-11 order-last order-lg-first">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="{{ asset('front/assets/images/logo.png') }}" alt=Logo"">
+                            <img src="{{ asset('front/assets/logo_sintexto.png') }}" alt=Logo"">
                         </a> <!-- logo -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

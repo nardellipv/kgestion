@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>NIKNA – Business Consulting HTML Template</title>
+    <title>KinderGestion | Un software para tu guarderia</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png">
@@ -88,39 +88,41 @@
 
 <!--====== FEATUERS PART START ======-->
 
-<section id="features-part" class="featuera pt-45 pb-75" style="background-image: url({{ asset('front/assets/images/dots.jpg') }})">
+<section id="features-part" class="featuera pt-45 pb-75"
+         style="background-image: url({{ asset('front/assets/images/dots.jpg') }})">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="singel-features d-flex align-items-start mt-30 justify-content-center">
                     <div class="icon">
-                        <i class="flaticon-global"></i>
+                        <img src="{{ asset('dist/icons/settings.png') }}">
                     </div>
                     <div class="content pl-20">
-                        <h5>Global Partnership</h5>
-                        <p>World Wide Services</p>
+                        <h5>Fácil de usar</h5>
+                        <p>El sistema para simplificar su trabajo como el de sus docentes.</p>
                     </div>
                 </div> <!-- singel features -->
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="singel-features d-flex align-items-start mt-30 justify-content-center">
                     <div class="icon">
-                        <i class="flaticon-shopping"></i>
+                        <img src="{{ asset('dist/icons/family.png') }}">
                     </div>
                     <div class="content pl-20">
-                        <h5>Sales & Trading</h5>
-                        <p>World Wide Services</p>
+                        <h5>Plataforma para padres</h5>
+                        <p>Una plataforma para padres muy simple de utilizar.</p>
                     </div>
                 </div> <!-- singel features -->
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="singel-features d-flex align-items-start mt-30 justify-content-center">
                     <div class="icon">
-                        <i class="flaticon-creative-idea"></i>
+                        <img src="{{ asset('dist/icons/network.png') }}">
                     </div>
                     <div class="content pl-20">
-                        <h5>Market Research</h5>
-                        <p>World Wide Services</p>
+                        <h5>Plataforma para jardín</h5>
+                        <p>Plataforma dedicada a la guardería muy fácil de utilizar y realizar comunicaciones con los
+                            padres.</p>
                     </div>
                 </div> <!-- singel features -->
             </div>
@@ -137,7 +139,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-4">
                 <div class="section-title text-center pb-15">
-                    <h3>Our Services</h3>
+                    <h3>Lo que ofrecemos</h3>
                     <div class="underline">
                         <span></span>
                         <span></span>
@@ -149,66 +151,72 @@
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-work"></i>
+                        <img src="{{ asset('dist/icons/service.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Financeial Analysis</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>Soporte dedicado</h4></a>
+                        <p class="mt-20">Ofrecemos un soporte a nuestros clientes dedicado para que puedan solucionar
+                            sus eventuales problemas.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-diagram"></i>
+                        <img src="{{ asset('dist/icons/bell.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Business Growth</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>Notificaciones</h4></a>
+                        <p class="mt-20">Tanto los padres como los docentes o dueños de jardines tienen la posibilidad
+                            de comunicarse en tiempo real.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-analysis"></i>
+                        <img src="{{ asset('dist/icons/calendar.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Financeial Analysis</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>Calendario</h4></a>
+                        <p class="mt-20">El jardín y los padres podrán ver en un calendario los próximos eventos de la
+                            guardería.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-branding"></i>
+                        <img src="{{ asset('dist/icons/calendar.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Marketing Plan</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>Gráficas</h4></a>
+                        <p class="mt-20">Gráficas de alumnos inscriptos en el último tiempo, tendrá un panorama amplio
+                            sobre la cantidad de alumnos inscriptos en su guardería.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-worldwide"></i>
+                        <img src="{{ asset('dist/icons/conversation.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Global Business</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>Circulares</h4></a>
+                        <p class="mt-20">Creación y difusión de circulares, para la comunicación de todos los padres del
+                            jardín.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="singel-services text-center mt-45">
                     <div class="icon mb-30">
-                        <i class="flaticon-risk"></i>
+                        <img src="{{ asset('dist/icons/email.png') }}">
                     </div>
                     <div class="content">
-                        <a href="services-details.html"><h4>Risk Management</h4></a>
-                        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+                        <a href=""><h4>EMails</h4></a>
+                        <p class="mt-20">Tanto padres como dueños y docentes podrán comunicarse entre ellos a través de
+                            emails.</p>
                     </div>
                 </div> <!-- singel services -->
             </div>
@@ -225,18 +233,21 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="company-about-cont pt-45">
-                    <h5 class="mb-15">About Our Company</h5>
-                    <h3 class="mb-15">We Provide High Quality Customer Service</h3>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aut odit aspernatur dolor quia consectetur, sed the consequuntur magni eos qui ullamco voluptatem is sequi nesciunt est neque porro is quisquam, qui dolorem ipsum qui ullamco adipisci alteration eius modi tempora.
+                    <h5 class="mb-15">Sobre Nosotros</h5>
+                    <h3 class="mb-15">Te contamos un poco sobre nosotros</h3>
+                    <p>Somos una empresa dedicada al desarrollo de aplicaciones webs y soluciones empresariales. Vimos
+                        la necesidad de que la comunicación
+                        entre guarderías infantiles y padres sigue siendo muy precaria.
                         <br>
                         <br>
-                        Nemo enim ipsam voluptatem quia voluptas sit aut odit aspernatur dolor quia consectetur.
+                        Trabajamos día a día para poder cumplir los sueños y metas de nuestros clientes y nos enfocamos
+                        para que se puedan cumplir.
                     </p>
                 </div> <!-- company about cont -->
             </div>
             <div class="col-lg-6 pt-50">
                 <div class="company-about-image">
-                    <img src="assets/images/about/about.jpg" alt="About">
+                    <img src="{{ asset('dist/img/about.jpg') }}" alt="About">
                 </div> <!-- company about image -->
             </div>
         </div> <!-- row -->
@@ -255,26 +266,26 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span class="counter">1750</span>
-                                <p>Project Completed</p>
+                                <span><span class="counter">40</span>+</span>
+                                <p>Guarderías</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span class="counter">750</span>
-                                <p>Happy Clients</p>
+                                <span class="counter">1259</span>
+                                <p>Alumnos</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span class="counter">17</span>
-                                <p>Awards Won</p>
+                                <span class="counter">14</span>
+                                <p>Provincias</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">7</span>M+</span>
-                                <p>Social Follower</p>
+                                <span class="counter">186</span>
+                                <p>Educadores</p>
                             </div> <!-- singel counter -->
                         </div>
                     </div> <!-- row -->
@@ -282,14 +293,23 @@
             </div>
             <div class="col-lg-6">
                 <div class="counter-call-to-action mt-120">
-                    <h3 class="mb-20">Do You Have Any Project?</h3>
-                    <p class="mb-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est eget felis vehicula imperdiet. Etiam non lacus at quam gravida porta. Fusce viverra consectetur turpis id lacinia.</p>
-                    <a href="index.html#" class="main-btn main-btn-2">View more</a>
+                    <h3 class="mb-20">Nos esforzamos por seguir creciendo</h3>
+                    <p class="mb-25">Utilizan nuestra plataforma centros educativos en Chile y Argentina. Muchos de los
+                        nuevos usuarios de la plataforma han sido recomendados de otras guarderías.
+                        <br>
+                        Queremos que nos sigan recomendando, por eso trabajamos duro diariamente, para que KinderGestión
+                        crezca y tenga más funcionalidades.
+                        <br>
+                        Actualizamos constantemente la plataforma para un mejor funcionamiento y sumando nuevas
+                        funcionalidades
+                        para que padres y educadores tengan una mejor experiencia sobre el sistema.</p>
+                    <a href="{{ url('#contact') }}" class="main-btn main-btn-2">Contacto</a>
                 </div>
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
-    <div class="counter-bg bg_cover" data-overlay="6" style="background-image: url(assets/images/bg-2.jpg)"></div> <!-- counter bg -->
+    <div class="counter-bg bg_cover" data-overlay="6" style="background-image: url(assets/images/bg-2.jpg)"></div>
+    <!-- counter bg -->
 </section>
 
 <!--====== COUNTER PART ENDS ======-->
@@ -301,12 +321,31 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="join-team-content text-center">
-                    <h2 class="mb-15">Do You Want To Join Our Team?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    <ul class="mt-10">
+                    <h2 class="mb-15">¿Qué es KinderGestion?</h2>
+                    <p>KinderGestion es una aplicación de comunicación diseñada para Jardines de infantes y padres,
+                        utilizamos una aplicación web
+                        de interacción muy intuitiva y de fácil uso, limpia de publicidad y totalmente segura.</p>
+                    <p>Con nuestra aplicación ya los padres no esperan el tan viejo y querido cuaderno de
+                        comunicaciones, como también se evitan los
+                        olvidos y pérdidas.</p>
+                    <p>KinderGestion le ayudará a la guardería a enviar comunicaciones a toda una sala o a ciertos
+                        padres especificamente
+                        escribiendo solo una vez y evitando la repetición de la misma nota.</p>
+                    <p>Tiene un sistema intuitivo para la registración de alumnos, padres y docentes, asignando a cada
+                        uno un perfil
+                        detallado.</p>
+                    <p>Posee un completo panel administrativo para directivos y docentes del jardín, creado para
+                        simplificar
+                        el día a día.</p>
+                    <p>Calendario con todas las actividades que realizó y realizará el jardín. De un solo vistazo se
+                        podrá observar todas las actividades que posee el centro en el mes actual.</p>
+                    <p>Esta aplicación dará un plus de modernidad y facilidad al jardín y la posibilidad de destacarse
+                        sobre otros
+                        centros educativos.</p>
+                    {{--<ul class="mt-10">
                         <li><a href="team-details.html#" class="main-btn">Apply now</a></li>
                         <li><a href="team-details.html#" class="main-btn main-btn-2">Your Career</a></li>
-                    </ul>
+                    </ul>--}}
                 </div>
             </div>
         </div>
@@ -322,7 +361,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center pb-20">
-                    <h3>What Says Our Clients</h3>
+                    <h3>Lo que dicen algunos clientes</h3>
                     <div class="underline">
                         <span></span>
                         <span></span>
@@ -334,45 +373,39 @@
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat volutpat odio, non sodales est. Pellentesque ullamcorper porta nulla quis egestas. In ullamcorper quam non.</p>
+                        <p>Pudimos modernizar nuestra guardería y los padres aceptaron el sistema muy bien. La verdad que ahorramos mucho tiempo
+                        en la comunicación.</p>
                     </div>
                     <div class="author-name mt-20">
-                        <h6>Jhon Deo</h6>
-                        <p>- Senior Engineer</p>
+                        <h6>María Laura</h6>
+                        <p>- Centro Educativo Bosque del Plata</p>
                         <i class="flaticon-quote"></i>
-                    </div>
-                    <div class="testimonial-author mt-25">
-                        <img src="{{ asset('front/assets/images/testmonials/ts-1.jpg') }}" alt="author">
                     </div>
                 </div> <!-- singel testimonial -->
             </div>
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat volutpat odio, non sodales est. Pellentesque ullamcorper porta nulla quis egestas. In ullamcorper quam non.</p>
+                        <p>La aplicación cumple con lo que promete y constantemente están agregando nuevas funcionalidades. La verdad que felicitamos
+                        a kinder gestión por lo realizado.</p>
                     </div>
                     <div class="author-name mt-20">
-                        <h6>Jhon Deo</h6>
-                        <p>- Senior Engineer</p>
+                        <h6>Mirna</h6>
+                        <p>- Colegio San Andrés</p>
                         <i class="flaticon-quote"></i>
-                    </div>
-                    <div class="testimonial-author mt-25">
-                        <img src="{{ asset('front/assets/images/testmonials/ts-2.jpg') }}" alt="author">
                     </div>
                 </div> <!-- singel testimonial -->
             </div>
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat volutpat odio, non sodales est. Pellentesque ullamcorper porta nulla quis egestas. In ullamcorper quam non.</p>
+                        <p>Siempre pendientes por nosotros y constantemente preguntando sobre como estamos con el sistema y si necesitamos alguna ayuda.
+                        La verdad que el servicio de PostVenta es lo mejor que tienen. Muchas gracias!!!</p>
                     </div>
                     <div class="author-name mt-20">
-                        <h6>Jhon Deo</h6>
-                        <p>- Senior Engineer</p>
+                        <h6>Dora y Pablo</h6>
+                        <p>- Jardín Creciendo</p>
                         <i class="flaticon-quote"></i>
-                    </div>
-                    <div class="testimonial-author mt-25">
-                        <img src="{{ asset('front/assets/images/testmonials/ts-3.jpg') }}" alt="author">
                     </div>
                 </div> <!-- singel testimonial -->
             </div>
@@ -406,46 +439,51 @@
         <div class="row justify-content-center">
             <div class="col-lg-6" style="margin-top: -7%">
                 <div class="contact-form contact-form-2 mt-100">
-                    <form id="contact-form" action="http://nikna.uipark.net/assets/contact.php" method="post" data-toggle="validator">
+                        {!! Form::open(['method' => 'POST','route' => ['contactmail'],'style'=>'display:inline','data-toggle'=>'validator']) !!}
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="single-form form-group">
-                                    <input name="name" type="text" placeholder="Name" data-error="Name is required." required="required">
+                                    <input name="name" type="text" placeholder="Nombre" data-error="Escriba un nombre"
+                                           required="required">
                                     <div class="help-block with-errors"></div>
                                 </div> <!-- single form -->
                             </div>
                             <div class="col-md-6">
                                 <div class="single-form form-group">
-                                    <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required="required">
+                                    <input name="email" type="email" placeholder="Email"
+                                           data-error="Escriba un email válido" required="required">
                                     <div class="help-block with-errors"></div>
                                 </div> <!-- single form -->
                             </div>
                             <div class="col-md-6">
                                 <div class="single-form form-group">
-                                    <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required="required">
+                                    <input name="subject" type="text" placeholder="Asunto"
+                                           data-error="Escriba un asunto" required="required">
                                     <div class="help-block with-errors"></div>
                                 </div> <!-- single form -->
                             </div>
                             <div class="col-md-6">
                                 <div class="single-form form-group">
-                                    <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required="required">
+                                    <input name="phone" type="text" placeholder="Teléfono">
                                     <div class="help-block with-errors"></div>
                                 </div> <!-- single form -->
                             </div>
                             <div class="col-md-12">
                                 <div class="single-form form-group">
-                                    <textarea name="message" placeholder="Message" data-error="Please,leave us a message." required="required"></textarea>
+                                    <textarea name="messageClient" placeholder="Mensaje"
+                                              data-error="Por favor escriba un mensaje." required="required"></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div> <!-- single form -->
                             </div>
                             <p class="form-message"></p>
                             <div class="col-md-12">
                                 <div class="single-form">
-                                    <button type="submit" class="main-btn">Submit</button>
+                                    <button type="submit" class="main-btn">Enviar</button>
                                 </div> <!-- single form -->
                             </div>
                         </div> <!-- row -->
-                    </form>
+                    {!! Form::Close() !!}
                 </div> <!-- contact form -->
             </div>
         </div> <!-- row -->
@@ -456,7 +494,7 @@
 
 <!--====== CALL TO ACTION PART START ======-->
 
-<section id="submit-ticket" class="submit-ticket pt-20 pb-50">
+{{--<section id="submit-ticket" class="submit-ticket pt-20 pb-50">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8">
@@ -471,7 +509,7 @@
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
-</section>
+</section>--}}
 
 <!--====== CALL TO ACTION PART ENDS ======-->
 
@@ -487,13 +525,15 @@
                             <img src="{{ asset('front/assets/images/logo-2.png') }}" alt="Logo">
                         </a>
                     </div>
-                    <p class="mb-15">ur clients range from FTSE comp anies, to large organisations and some small local businesses who are striving to expand.</p>
+                    <p class="mb-15">ur clients range from FTSE comp anies, to large organisations and some small local
+                        businesses who are striving to expand.</p>
                     <ul>
                         <li><a href="index.html#"><i class="flaticon-facebook"></i></a></li>
                         <li><a href="index.html#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
                         <li><a href="index.html#"><i class="flaticon-google-plus"></i></a></li>
                         <li><a href="index.html#"><i class="flaticon-linkedin-logo"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a></li>
+                        <li><a href="index.html#"><i class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a>
+                        </li>
                     </ul>
                 </div> <!-- footer description -->
             </div>

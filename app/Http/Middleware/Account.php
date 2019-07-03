@@ -23,7 +23,7 @@ class Account
 
         $diff = $account->created_at->diff(now())->days;
 
-        if ($account->account == 'TEST' && $diff >= 60) {
+        if ($account->account == 'TEST' && $diff >= 30) {
             return abort(409);
         }
 

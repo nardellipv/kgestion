@@ -15,12 +15,13 @@ class ContactMailController extends Controller
         $valueArray = [
             'name' => $request->name,
             'email' => $request->email,
+            'phone' => $request->phone,
             'subjet' => $request->subjet,
-            'message' => $request->message,
+            'message' => $request->messageClient,
         ];
 
 
-        Mail::to('info@gkinder.com')->send(new Contact($valueArray));
+        Mail::to('info@kindergestion.com')->send(new Contact($valueArray));
 //        Session::flash('message', 'Su email fue enviado, le responderemos a la brevedad. Muchas gracias.');
         return Redirect::to('/');
     }

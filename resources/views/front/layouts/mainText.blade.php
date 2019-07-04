@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Kinder Gestión | @yield('title','Lleva tu jardín al siglo XXI')</title>
+    <title>KinderGestion | Un software para tu guarderia</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('front/assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">
@@ -47,6 +47,7 @@
 
 <body>
 
+
 <!--====== PRELOADER PART START ======-->
 
 <div class="preloader">
@@ -67,39 +68,13 @@
 
 <!--====== PRELOADER PART START ======-->
 
-
 <!--====== HEADER PART START ======-->
 
 @include('front.parts.menu')
 
-<!--====== HEADER PART ENDS ======-->
-
-<!--====== PAGE BANNER PART START ======-->
-
-<section id="page-banner" class="bg_cover" style="background-image: url({{ asset('front/assets/images/page-banner.jpg') }})" data-overlay="6">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-banner-content text-center">
-                    <h2>Blog KinderGestión</h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ url('blog') }}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">blog</li>
-                        </ol>
-                    </nav>
-                </div> <!-- page banner content -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
-
-<!--====== PAGE BANNER PART ENDS ======-->
-
-<!--====== BLOG GRID PART START ======-->
 
 @yield('content')
-<!--====== BLOG GRID PART ENDS ======-->
+<!--====== HEADER PART ENDS ======-->
 
 <!--====== FOOTER PART START ======-->
 
@@ -107,9 +82,11 @@
 
 <!--====== FOOTER PART ENDS ======-->
 
+<!--====== COPYRIGHT PART ENDS ======-->
+
 <!--====== BACK TO TOP PART START ======-->
 
-<a href="blog-grid-sidebar.html#" class="back-to-top">
+<a href="index.html#" class="back-to-top">
     <i class="flaticon-chevron-up"></i>
 </a>
 

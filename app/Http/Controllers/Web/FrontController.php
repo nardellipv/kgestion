@@ -21,4 +21,19 @@ class FrontController extends Controller
     {
         return view('/login');
     }
+
+    public function term()
+    {
+        return view('front.parts.term');
+    }
+
+    public function polity()
+    {
+        return view('front.parts.condicion');
+    }
+
+    public function faq()
+    {
+        return view('front.parts.faq');
+    }
 }

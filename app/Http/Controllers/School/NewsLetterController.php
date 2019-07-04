@@ -17,6 +17,6 @@ class NewsLetterController extends Controller
         $newsLetter->save();
 
         Session::flash('message', 'El mail ' . $newsLetter->email . ' fue agregado correctamente');
-        return Redirect::to('/login#horizontalTab3');
+        return back();
     }
 }

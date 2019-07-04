@@ -34,7 +34,7 @@
                 <div class="col-lg-11 order-last order-lg-first">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="{{ asset('front/assets/logo_sintexto.png') }}" alt=Logo"">
+                            <img src="{{ asset('dist/img/logo-blanco.png') }}" alt=Logo"">
                         </a> <!-- logo -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -62,6 +62,9 @@
                                         <a href="{{ request()->is('blog') ? url('/').'/#whats' : '#whats' }}">¿Que es
                                             kinderGestion?</a>
                                     </li>
+                                    {{--<li class="nav-item">
+                                        <a href="{{ request()->is('blog') ? url('/').'/#price' : '#price' }}">Precios</a>
+                                    </li>--}}
                                     <li class="nav-item">
                                         <a class="{{ request()->is('blog') ? 'active' : '' }}"
                                            href="#latest-news">blog</a>

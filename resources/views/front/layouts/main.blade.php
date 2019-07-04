@@ -89,7 +89,7 @@
 <!--====== FEATUERS PART START ======-->
 
 <section id="features-part" class="featuera pt-45 pb-75"
-         style="background-image: url({{ asset('front/assets/images/dots.jpg') }})">
+         style="background-image: url({{ asset('front/assets/media/img/dots.jpg') }})">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
@@ -256,6 +256,12 @@
 
 <!--====== COMPANY ABOUT PART ENDS ======-->
 
+<!--====== Prices ======-->
+
+{{--@include('front.parts.prices')--}}
+
+<!--====== Prices END ======-->
+
 <!--====== COUNTER PART START ======-->
 
 <section id="counter-part" class="counter-part pt-80 pb-130">
@@ -342,6 +348,7 @@
                     <p>Esta aplicación dará un plus de modernidad y facilidad al jardín y la posibilidad de destacarse
                         sobre otros
                         centros educativos.</p>
+                    <h6>Registra tu centro educativo totalmente gratis y probalo por 30 días sin cargo.</h6>
                     {{--<ul class="mt-10">
                         <li><a href="team-details.html#" class="main-btn">Apply now</a></li>
                         <li><a href="team-details.html#" class="main-btn main-btn-2">Your Career</a></li>
@@ -515,106 +522,9 @@
 
 <!--====== FOOTER PART START ======-->
 
-<section id="footer-part" class="footer-part pt-70 pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="footer-description pt-50">
-                    <div class="logo mb-20">
-                        <a href="index.html#">
-                            <img src="{{ asset('front/assets/images/logo-2.png') }}" alt="Logo">
-                        </a>
-                    </div>
-                    <p class="mb-15">ur clients range from FTSE comp anies, to large organisations and some small local
-                        businesses who are striving to expand.</p>
-                    <ul>
-                        <li><a href="index.html#"><i class="flaticon-facebook"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-google-plus"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-linkedin-logo"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a>
-                        </li>
-                    </ul>
-                </div> <!-- footer description -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-link pt-45 pl-50">
-                    <div class="title mb-30">
-                        <h4>Usefull Links</h4>
-                    </div>
-                    <ul>
-                        <li><a href="about.html"><i class="fa fa-angle-right"></i> About Us</a></li>
-                        <li><a href="blog-grid.html"><i class="fa fa-angle-right"></i> Company News</a></li>
-                        <li><a href="blog-list-sidebar.html"><i class="fa fa-angle-right"></i> Our Blog</a></li>
-                        <li><a href="company-history.html"><i class="fa fa-angle-right"></i> About Career</a></li>
-                        <li><a href="testimonials.html"><i class="fa fa-angle-right"></i> Clients</a></li>
-                    </ul>
-                </div> <!-- footer link -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-contact pt-45">
-                    <div class="title mb-35">
-                        <h4>Contact Us</h4>
-                    </div>
-                    <ul>
-                        <li>
-                            <p>+12 345 678 9008 </p>
-                            <p>+12 987 654 7566</p>
-                        </li>
-                        <li>
-                            <p>contactus@buildetic.com</p>
-                            <p>info@support.com</p>
-                        </li>
-                        <li>
-                            <p>721/A Central Street, New York. South East Addril, CEO 12309</p>
-                        </li>
-                    </ul>
-                </div> <!-- footer contact -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="footer-subscribe pt-45">
-                    <div class="title mb-35">
-                        <h4>Subscribe Us</h4>
-                    </div>
-                    <p>Join 90,000+ awesome subscribers and update yourself with our exclusive offers.</p>
-                    <div class="subscribe-form mt-25">
-                        <form action="index.html#">
-                            <input type="text" placeholder="Enter your Email">
-                            <button type="button"><i class="flaticon-send"></i></button>
-                        </form>
-                    </div>
-                </div>  <!-- footer subscribe -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
+@include('front.layouts.footer')
 
 <!--====== FOOTER PART ENDS ======-->
-
-<!--====== COPYRIGHT PART START ======-->
-
-<section id="copyright-part" class="copyright-part pt-15 pb-25">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="copyright-content text-center text-lg-left pt-10">
-                    <p>&copy; 2019 All Rights Reserved. Designed By NIKNA</p>
-                </div> <!-- copyright content -->
-            </div>
-            <div class="col-lg-6">
-                <div class="copyright-policy text-center text-lg-right pt-10">
-                    <ul>
-                        <li><a href="index.html#">Terms & Condition</a></li>
-                        <li><a href="index.html#">Privacy Policy</a></li>
-                        <li><a href="index.html#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
-
-<!--====== COPYRIGHT PART ENDS ======-->
 
 <!--====== BACK TO TOP PART START ======-->
 

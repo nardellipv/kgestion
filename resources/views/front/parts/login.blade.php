@@ -104,9 +104,6 @@
             </form>
         </div>
         <div class="col-md-6 login-form-2">
-            <div class="login-logo">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-            </div>
             <h3>Registrarse</h3>
             <form method="POST" action="{{ route('register') }}"
                   aria-label="{{ __('Register') }}">

@@ -130,7 +130,8 @@
                             <div class="tab-1 resp-tab-content gallery-images">
                                 <div class="register agileits">
                                     <h3>Novedades</h3>
-                                    {!! Form::open(['method' => 'POST','route' => ['newsLetter'],'style'=>'display:inline']) !!} {{ csrf_field() }}
+                                    {!! Form::open(['method' => 'POST','route' => ['newsLetter'],'style'=>'display:inline']) !!}
+                                    {{ csrf_field() }}
                                     <input type="email" class="email" name="email" placeholder="Email" required="">
                                     <input type="submit" value="Darme de alta">
                                     <div class="clear"></div>

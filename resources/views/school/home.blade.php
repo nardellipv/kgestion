@@ -1,6 +1,9 @@
 @extends('school.layouts.main')
 
 @section('content')
+    @if($profileSchool->account == 'TEST')
+        @include('school.dashboard.upgradePlan')
+    @endif
     @if(!$profileSchool->address)
         @include('school.dashboard.completeProfile')
     @endif

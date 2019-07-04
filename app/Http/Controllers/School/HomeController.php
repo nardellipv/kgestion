@@ -55,6 +55,8 @@ class HomeController extends Controller
             ->setDateColumn('created_at')
             ->lastByMonth(12, true);
 
+        //fin count
+
         $messageUnRead = Message::with(['tutor'])
             ->where('school_id', Auth::User()->school_id)
             ->where('read', 'NOREAD')
@@ -75,6 +77,7 @@ class HomeController extends Controller
 
         $teachers = Teacher::where('school_id', Auth::User()->school_id)
             ->get();
+
 
         return view('school.home', [
             'rooms' => $rooms,
@@ -98,5 +101,10 @@ class HomeController extends Controller
             ->get();
 
         return view('school.home', compact('teachers'));
+    }
+
+    public function prices()
+    {
+        return view('school.upgrade.planPrices');
     }
 }

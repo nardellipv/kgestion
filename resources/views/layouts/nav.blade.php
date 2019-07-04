@@ -80,7 +80,7 @@
                     <ul class="dropdown-menu">
                         <!-- The user image in the menu -->
                         <li class="user-header">
-                            <img src="{{ asset('dist/img/logo_sintexto.png') }}" class="img-circle" alt="imagen-perfil">
+                            <img src="{{ asset('dist/img/logo-school.png') }}" class="img-circle" alt="imagen-perfil">
                             <p>
                                 {{Auth::user()->name}}-{{Auth::user()->user_type}}
                                 <small>Miembro desde {{Auth::user()->created_at->format('d/m/y')}}</small>

@@ -4,6 +4,10 @@
 Route::get('/', 'Web\FrontController@index')->name('index');
 Route::get('/login', 'Web\FrontController@login')->name('login');
 
+Route::get('/terminos', 'Web\FrontController@term')->name('term');
+Route::get('/politica', 'Web\FrontController@polity')->name('polity');
+Route::get('/preguntas', 'Web\FrontController@faq')->name('faq');
+
 Route::get('/blog', 'Web\BlogController@blog')->name('blog');
 Route::get('/blog/{slug}', 'Web\BlogController@post');
 
@@ -21,6 +25,10 @@ Auth::routes();
 Route::middleware(['auth', 'ActiveStatus', 'Account'])->group(function () {
 
     Route::get('school/home', 'School\HomeController@view')->name('home');
+    Route::get('school/precios', 'School\HomeController@prices')->name('prices');
+    Route::get('school/aumentar/{plan}', 'School\UpgradeController@upgrade')->name('upgrade');
+    Route::post('school/aumentar/solicitud', 'School\UpgradeController@solicitud')->name('solicitud');
+
     Route::resource('school/salas', 'School\RoomController');
 
     Route::resource('school/estudiantes', 'School\StudentController');

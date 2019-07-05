@@ -1,6 +1,6 @@
 @extends('front.layouts.blog')
 
-@section('meta-description','👉 Enterate de lo último en temas de celiaquia. Publicamos contenido semanalmente para que celíacos Mendocinos este actualizados constantemente.')
+@section('meta-description','👉 Enterate de lo último en temas de Guarderías Infantiles y temas relacionados con niños en edad preescolar.')
 
 @section('content')
     <section id="blog-grid" class="pt-80 pb-130">
@@ -10,7 +10,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-9">
                         <div class="single-blog mt-50">
                             <div class="blog-image">
-                                <img src="{{ $post->photo }}" alt="Blog">
+                                <img src="{{ asset('front/images/blog/'.$post->photo) }}" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <div class="date">
@@ -21,7 +21,7 @@
                                 </div>
                                 <div class="content">
                                     <a href="{{ url('blog', $post->slug) }}" class="mb-15"><h4>{{ $post->title }}</h4></a>
-                                    <p class="mb-15">{{ str_limit($post->body,100)  }}</p>
+                                    {{--<p class="mb-15">{!! str_limit($post->body,100) !!}</p>--}}
                                     <a href="{{ url('blog', $post->slug) }}">Leer más <i
                                                 class="fa fa-angle-right"></i></a>
                                 </div>

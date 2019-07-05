@@ -15,19 +15,18 @@ class HomeController extends Controller
 {
     public function view()
     {
-        $tutor = Tutor::where('id', Auth::User()->school_id)
-            ->first();
-
-        $nextEvents = Calendar::with(['Room'])
-            ->join('room__tutors', 'room__tutors.room_id', 'calendars.room_id')
-            ->where('calendars.school_id', $tutor->school_id)
-            ->where('calendars.date_start', '>=', Date::now()->sub('1 day'))
-            ->get();
 
         $tutorId = Tutor::where('email', Auth::user()->email)
             ->first();
 
-        $students = Student::with(['room','school'])
+        $nextEvents = Calendar::with(['Room'])
+            ->join('room__tutors', 'room__tutors.room_id', 'calendars.room_id')
+            ->where('calendars.school_id', $tutorId->school_id)
+            ->where('calendars.date_start', '>=', Date::now()->sub('1 day'))
+            ->get();
+
+
+        $students = Student::with(['room', 'school'])
             ->where('tutor_id', $tutorId->id)
             ->get();
 

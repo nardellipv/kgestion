@@ -26,7 +26,7 @@ class UpgradeController extends Controller
         Mail::send('email.upgradePlan', $request->all(), function ($msj) use ($request) {
             $msj->from('no-respond@kindergestion.com');
             $msj->subject('Mensaje de KinderGestión');
-            $msj->to('comercial@kidergestion.com');
+            $msj->to('comercial@kindergestion.com');
         });
 
         Session::flash('message', 'Recibimos su solicitud correctamente, un asesor se pondrá en contacto con usted. Muchas gracias');

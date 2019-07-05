@@ -82,7 +82,7 @@ return [
 	'timezone'              => 'El campo :attribute debe ser una zona válida.',
 	'unique'                => 'El campo :attribute ya ha sido tomado.',
 	'url'                   => 'El formato de :attribute es inválido.',
-	'uploaded'              => 'El campo :attribute no ha podido ser cargado.',
+	'uploaded'              => 'El campo :attribute no ha podido ser cargado, por favor revise el archivo que intenta subir.',
 
 	/*
 	|--------------------------------------------------------------------------

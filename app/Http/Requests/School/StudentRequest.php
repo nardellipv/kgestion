@@ -24,13 +24,14 @@ class StudentRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=> 'required|min:4|max:50',
-            'apellido'=> 'required|min:4|max:50',
-            'dni'=> 'required|numeric',
-            'sexo'=> 'required',
-            'fecha'=> 'required',
-            'room_id'=> 'required',
-            'tutor_id'=> 'required',
+            'nombre' => 'required|min:4|max:50',
+            'apellido' => 'required|min:4|max:50',
+            'dni' => 'required|numeric',
+            'sexo' => 'required',
+            'fecha' => 'required',
+            'room_id' => 'required',
+            'tutor_id' => 'required',
+            'file' => 'mimes:jpeg,jpg,png,gif|required|max:1000',
         ];
     }
 }

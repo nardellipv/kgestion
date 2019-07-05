@@ -12,8 +12,7 @@
     <!--====== Title ======-->
     <title>Kinder Gestión | @yield('title','Lleva tu jardín al siglo XXI')</title>
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('front/assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">
@@ -41,6 +40,14 @@
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
+
+    {{--google analytics--}}
+    @include('external.analytics')
+    {{--google analytics--}}
+
+    {{--addthis--}}
+    @include('external.addthis')
+    {{--addthis--}}
 
 
 </head>
@@ -153,7 +160,6 @@
 <!--====== Map js ======-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
 <script src="{{ asset('front/assets/js/map-script.js') }}"></script>
-
 </body>
 
 </html>

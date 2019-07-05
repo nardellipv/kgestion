@@ -15,9 +15,7 @@
                 <div class="col-lg-3">
                     <div class="social-icon text-center text-lg-right pt-15">
                         <ul>
-                            <li><a href="index.html#"><i class="flaticon-facebook"></i></a></li>
-                            <li><a href="index.html#"><i
-                                            class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a></li>
+                            <li><a href="https://www.facebook.com/KinderGestión-2412053092346019" target="_blank"><i class="flaticon-facebook"></i></a></li>
                         </ul>
                     </div> <!-- social icon -->
                 </div>

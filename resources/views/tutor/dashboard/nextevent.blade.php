@@ -18,7 +18,7 @@
             </tr>
             </thead>
             <tbody>
-           @foreach ($nextEvents as $event)
+            @foreach ($nextEvents as $event)
                 <tr>
                     <td>{{ $event->activity }}</td>
                     <td>{{ substr($event->description,0,100) }}...</td>

@@ -9,6 +9,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta property="og:url" content="https://www.kindergestion.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Un software para la comunicación entre el instituto y los padres."/>
+    <meta property="og:description" content="Comunicate con mayor velocidad y sin usar papeles ni cuadernos, llevá tu jardín
+        al Siglo XXI"/>
+    <meta property="og:image" content="https://www.kindergestion.com/dist/img/logo-blanco.png"/>
+
     <!--====== Title ======-->
     <title>KinderGestion | Un software para tu guarderia</title>
 
@@ -42,7 +49,13 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
 
+    {{--google analytics--}}
+    @include('external.analytics')
+    {{--google analytics--}}
 
+    {{--chat--}}
+    @include('external.chat')
+    {{--chat--}}
 </head>
 
 <body>
@@ -380,8 +393,9 @@
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>Pudimos modernizar nuestra guardería y los padres aceptaron el sistema muy bien. La verdad que ahorramos mucho tiempo
-                        en la comunicación.</p>
+                        <p>Pudimos modernizar nuestra guardería y los padres aceptaron el sistema muy bien. La verdad
+                            que ahorramos mucho tiempo
+                            en la comunicación.</p>
                     </div>
                     <div class="author-name mt-20">
                         <h6>María Laura</h6>
@@ -393,8 +407,9 @@
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>La aplicación cumple con lo que promete y constantemente están agregando nuevas funcionalidades. La verdad que felicitamos
-                        a kinder gestión por lo realizado.</p>
+                        <p>La aplicación cumple con lo que promete y constantemente están agregando nuevas
+                            funcionalidades. La verdad que felicitamos
+                            a kinder gestión por lo realizado.</p>
                     </div>
                     <div class="author-name mt-20">
                         <h6>Mirna</h6>
@@ -406,8 +421,9 @@
             <div class="col-lg-6">
                 <div class="singel-testimonial text-center mt-30">
                     <div class="testimonial-conent">
-                        <p>Siempre pendientes por nosotros y constantemente preguntando sobre como estamos con el sistema y si necesitamos alguna ayuda.
-                        La verdad que el servicio de PostVenta es lo mejor que tienen. Muchas gracias!!!</p>
+                        <p>Siempre pendientes por nosotros y constantemente preguntando sobre como estamos con el
+                            sistema y si necesitamos alguna ayuda.
+                            La verdad que el servicio de PostVenta es lo mejor que tienen. Muchas gracias!!!</p>
                     </div>
                     <div class="author-name mt-20">
                         <h6>Dora y Pablo</h6>
@@ -446,50 +462,50 @@
         <div class="row justify-content-center">
             <div class="col-lg-6" style="margin-top: -7%">
                 <div class="contact-form contact-form-2 mt-100">
-                        {!! Form::open(['method' => 'POST','route' => ['contactmail'],'style'=>'display:inline','data-toggle'=>'validator']) !!}
-                        {{ csrf_field() }}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single-form form-group">
-                                    <input name="name" type="text" placeholder="Nombre" data-error="Escriba un nombre"
-                                           required="required">
-                                    <div class="help-block with-errors"></div>
-                                </div> <!-- single form -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-form form-group">
-                                    <input name="email" type="email" placeholder="Email"
-                                           data-error="Escriba un email válido" required="required">
-                                    <div class="help-block with-errors"></div>
-                                </div> <!-- single form -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-form form-group">
-                                    <input name="subject" type="text" placeholder="Asunto"
-                                           data-error="Escriba un asunto" required="required">
-                                    <div class="help-block with-errors"></div>
-                                </div> <!-- single form -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-form form-group">
-                                    <input name="phone" type="text" placeholder="Teléfono">
-                                    <div class="help-block with-errors"></div>
-                                </div> <!-- single form -->
-                            </div>
-                            <div class="col-md-12">
-                                <div class="single-form form-group">
+                    {!! Form::open(['method' => 'POST','route' => ['contactmail'],'style'=>'display:inline','data-toggle'=>'validator']) !!}
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single-form form-group">
+                                <input name="name" type="text" placeholder="Nombre" data-error="Escriba un nombre"
+                                       required="required">
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-form form-group">
+                                <input name="email" type="email" placeholder="Email"
+                                       data-error="Escriba un email válido" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-form form-group">
+                                <input name="subject" type="text" placeholder="Asunto"
+                                       data-error="Escriba un asunto" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-form form-group">
+                                <input name="phone" type="text" placeholder="Teléfono">
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-md-12">
+                            <div class="single-form form-group">
                                     <textarea name="messageClient" placeholder="Mensaje"
                                               data-error="Por favor escriba un mensaje." required="required"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div> <!-- single form -->
-                            </div>
-                            <p class="form-message"></p>
-                            <div class="col-md-12">
-                                <div class="single-form">
-                                    <button type="submit" class="main-btn">Enviar</button>
-                                </div> <!-- single form -->
-                            </div>
-                        </div> <!-- row -->
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- single form -->
+                        </div>
+                        <p class="form-message"></p>
+                        <div class="col-md-12">
+                            <div class="single-form">
+                                <button type="submit" class="main-btn">Enviar</button>
+                            </div> <!-- single form -->
+                        </div>
+                    </div> <!-- row -->
                     {!! Form::Close() !!}
                 </div> <!-- contact form -->
             </div>

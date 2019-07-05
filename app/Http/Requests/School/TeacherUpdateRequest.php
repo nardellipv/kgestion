@@ -28,6 +28,7 @@ class TeacherUpdateRequest extends FormRequest
             'apellido'=> 'required|min:4|max:50',
             'telefono'=> 'required|numeric',
             'direccion'=> 'required|min:4',
+            'file' => 'mimes:jpeg,jpg,png,gif|required|max:1000',
         ];
     }
 }

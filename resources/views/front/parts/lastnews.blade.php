@@ -16,26 +16,22 @@
         </div> <!-- row -->
         <div class="row justify-content-center">
             @foreach($posts as $post)
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="singel-news mt-30">
-                        <div class="news-thumb">
-                            <img src="{{ asset('front/images/blog/') }}" alt="Latest News">
-                        </div>
-                        <div class="news-content">
-                            <div class="share">
-                                <a href="#"><i class="flaticon-share"></i></a>
-                            </div>
-                            <a href="{{ url('blog', $post->slug) }}" class="mb-15"><h4>{{ $post->title }}</h4>
-                            </a>
-                            <p class="mb-20">{{ str_limit($post->body, 100) }}</p>
-                        </div>
-                        <div class="date-details">
-                            <span class="date"><a href="#">{{ Date::parse($post->create)->format('d F Y') }}</a></span>
-                            <span class="details"><a href="{{ url('blog', $post->slug) }}">Leer más <i
-                                            class="flaticon-right-arrow"></i></a></span>
-                        </div>
-                    </div> <!-- singel news -->
-                </div>
+            <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="singel-news mt-30">
+                    <div class="news-thumb">
+                        <img src="{{ asset('front/images/blog/'.$post->photo) }}" alt="{{ $post->name }}">
+                    </div>
+                    <div class="news-content">
+                        <a href="{{ url('blog', $post->slug) }}" class="mb-15"><h4>{{ $post->title }}</h4></a>
+{{--                        <p>{!! str_limit($post->body, 85) !!}</p>--}}
+                    </div>
+                    <div class="date-details">
+                        <span class="date"><a href="#">{{ Date::parse($post->create)->format('d F Y') }}</a></span>
+                        <span class="details"><a href="{{ url('blog', $post->slug) }}">Leer más <i
+                                        class="flaticon-right-arrow"></i></a></span>
+                    </div>
+                </div> <!-- singel news -->
+            </div>
             @endforeach
         </div> <!-- row -->
     </div> <!-- container -->

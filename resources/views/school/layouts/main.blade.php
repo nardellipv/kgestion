@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('dist/css/skins/skin-blue.min.css') }}">
 
     {{--google analytics--}}
-    {{--@include('external.analytics')--}}
+    @include('external.analytics')
     {{--google analytics--}}
 
     {{--OneSignal--}}

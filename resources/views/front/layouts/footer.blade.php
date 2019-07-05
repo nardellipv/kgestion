@@ -13,8 +13,7 @@
                     <p class="mb-15">Trabajamos para hacer nuestros productos intuitivos y de fácil acceso. Nos esforzamos para
                         llevar a tu jardín al Siglo XXI.</p>
                     <ul>
-                        <li><a href="index.html#"><i class="flaticon-facebook"></i></a></li>
-                        <li><a href="index.html#"><i class="flaticon-instagram-social-network-logo-of-photo-camera"></i></a>
+                        <li><a href="https://www.facebook.com/KinderGestión-2412053092346019" target="_blank"><i class="flaticon-facebook"></i></a></li>
                         </li>
                     </ul>
                 </div> <!-- footer description -->

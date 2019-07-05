@@ -12,7 +12,7 @@
                                 <a href="{{ url('blog', $lastPost->slug) }}">
                                                 <span class="single-post mt-30">
                                                     <span class="image">
-                                                        <img src="{{ $lastPost->photo }}"
+                                                        <img src="{{ asset('front/images/blog/'.$post->photo) }}"
                                                              alt="post" width="30%">
                                                     </span>
                                                     <span class="content pl-85">

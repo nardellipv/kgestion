@@ -29,6 +29,7 @@ class TeacherStoreRequest extends FormRequest
             'telefono'=> 'required|numeric',
             'email'=> 'required|email|unique:teachers,email',
             'direccion'=> 'required|min:4',
+            'file' => 'mimes:jpeg,jpg,png,gif|required|max:1000',
         ];
     }
 }

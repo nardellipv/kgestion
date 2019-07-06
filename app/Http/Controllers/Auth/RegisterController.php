@@ -2,6 +2,7 @@
 
 namespace kindergestion\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Mail;
 use kindergestion\Http\Controllers\Controller;
 use kindergestion\User;
 use kindergestion\School;
@@ -76,6 +77,11 @@ class RegisterController extends Controller
             'school_id' => $school->id,
         ]);
 
+        Mail::send('email.registerUser', $data, function ($msj) use ($data) {
+            $msj->from('no-respond@kindergestion.com');
+            $msj->subject('Mensaje de KinderGestión');
+            $msj->to('nardellipv@gmail.com');
+        });
 
         return $user;
     }

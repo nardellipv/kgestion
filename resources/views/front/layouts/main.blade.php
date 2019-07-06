@@ -56,6 +56,10 @@
     {{--chat--}}
     @include('external.chat')
     {{--chat--}}
+
+    {{--pixel--}}
+    @include('external.pixel')
+    {{--pixel--}}
 </head>
 
 <body>
